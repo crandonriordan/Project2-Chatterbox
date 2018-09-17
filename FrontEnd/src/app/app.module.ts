@@ -12,13 +12,17 @@ import { ROUTES } from './app.routes';
 import { AuthService } from './services/auth/auth.service';
 import { CallbackComponent } from './components/callback/callback.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { TableComponent } from './components/table/table.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CallbackComponent,
-    NavbarComponent
+    NavbarComponent,
+    TableComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
