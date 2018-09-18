@@ -28,20 +28,26 @@ public class Post {
 	@JsonProperty
 	private String content;
 	
+	@Column(name="IMAGE_URL")
+	@JsonProperty
+	private String imageUrl;
+	
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="GROUP_ID")
 	@JsonProperty("group")
 	private Group group;
 
 	public Post() {
-		
+		super();
+		// TODO Auto-generated constructor stub
 	}
-	
-	public Post(User user, String title, String content, Group group) {
+
+	public Post(User user, String title, String content, String imageUrl, Group group) {
 		super();
 		this.user = user;
 		this.title = title;
 		this.content = content;
+		this.imageUrl = imageUrl;
 		this.group = group;
 	}
 
@@ -77,6 +83,14 @@ public class Post {
 		this.content = content;
 	}
 
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+
 	public Group getGroup() {
 		return group;
 	}
@@ -92,6 +106,7 @@ public class Post {
 		result = prime * result + ((content == null) ? 0 : content.hashCode());
 		result = prime * result + ((group == null) ? 0 : group.hashCode());
 		result = prime * result + id;
+		result = prime * result + ((imageUrl == null) ? 0 : imageUrl.hashCode());
 		result = prime * result + ((title == null) ? 0 : title.hashCode());
 		result = prime * result + ((user == null) ? 0 : user.hashCode());
 		return result;
@@ -118,6 +133,11 @@ public class Post {
 			return false;
 		if (id != other.id)
 			return false;
+		if (imageUrl == null) {
+			if (other.imageUrl != null)
+				return false;
+		} else if (!imageUrl.equals(other.imageUrl))
+			return false;
 		if (title == null) {
 			if (other.title != null)
 				return false;
@@ -133,12 +153,10 @@ public class Post {
 
 	@Override
 	public String toString() {
-		return "Post [id=" + id + ", user=" + user + ", title=" + title + ", content=" + content + ", group=" + group
-				+ "]";
+		return "Post [id=" + id + ", user=" + user + ", title=" + title + ", content=" + content + ", imageUrl="
+				+ imageUrl + ", group=" + group + "]";
 	}
-	
-	
-	
+
 	
 	
 
