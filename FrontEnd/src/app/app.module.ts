@@ -15,6 +15,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { TableComponent } from './components/table/table.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 
+import {DataTableModule} from "angular-6-datatable";
+import { PosttableComponent } from './components/posttable/posttable.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,12 +25,14 @@ import { PaginationComponent } from './components/pagination/pagination.componen
     CallbackComponent,
     NavbarComponent,
     TableComponent,
-    PaginationComponent
+    PaginationComponent,
+    PosttableComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    DataTableModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [AuthService],
