@@ -19,9 +19,14 @@ public class PostDaoImpl implements PostDao {
 	}
 
 	@Override
-	public Post getPostsByUserId(String id) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Post> getPostsByUserId(String id) {
+		Session s = HibernateUtil.getSession();
+		Query q = s.createQuery("from User u where u.id = :userId");
+		q.setString("userId", id);
+		List<Post> posts = q.list();
+		s.close();
+		return posts;
+		
 	}
 
 	@Override
