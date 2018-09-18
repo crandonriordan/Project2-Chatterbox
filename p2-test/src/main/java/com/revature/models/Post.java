@@ -28,25 +28,61 @@ public class Post {
 	@JsonProperty
 	private String content;
 	
-	
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name="GROUP_ID")
+	@JsonProperty("group")
+	private Group group;
+
 	public Post() {
+		
+	}
+	
+	public Post(User user, String title, String content, Group group) {
 		super();
+		this.user = user;
+		this.title = title;
+		this.content = content;
+		this.group = group;
 	}
 
-	public Post(int id, User user, String title, String content) {
-		super();
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
 		this.id = id;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
 		this.user = user;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
 		this.title = title;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
 		this.content = content;
 	}
-	
-	public Post(User user, String title, String content) {
-		super();
-		this.id = id;
-		this.user = user;
-		this.title = title;
-		this.content = content;
+
+	public Group getGroup() {
+		return group;
+	}
+
+	public void setGroup(Group group) {
+		this.group = group;
 	}
 
 	@Override
@@ -54,6 +90,7 @@ public class Post {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((content == null) ? 0 : content.hashCode());
+		result = prime * result + ((group == null) ? 0 : group.hashCode());
 		result = prime * result + id;
 		result = prime * result + ((title == null) ? 0 : title.hashCode());
 		result = prime * result + ((user == null) ? 0 : user.hashCode());
@@ -74,6 +111,11 @@ public class Post {
 				return false;
 		} else if (!content.equals(other.content))
 			return false;
+		if (group == null) {
+			if (other.group != null)
+				return false;
+		} else if (!group.equals(other.group))
+			return false;
 		if (id != other.id)
 			return false;
 		if (title == null) {
@@ -91,7 +133,13 @@ public class Post {
 
 	@Override
 	public String toString() {
-		return "Post [id=" + id + ", user=" + user + ", title=" + title + ", content=" + content + "]";
+		return "Post [id=" + id + ", user=" + user + ", title=" + title + ", content=" + content + ", group=" + group
+				+ "]";
 	}
+	
+	
+	
+	
+	
 
 }
