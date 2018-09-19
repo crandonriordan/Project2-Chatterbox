@@ -21,7 +21,7 @@ public class PostDaoImpl implements PostDao {
 	@Override
 	public List<Post> getPostsByUserId(String id) {
 		Session s = HibernateUtil.getSession();
-		Query q = s.createQuery("from User u where u.id = :userId");
+		Query q = s.createQuery("from Post p where p.user.id = :userId");
 		q.setString("userId", id);
 		List<Post> posts = q.list();
 		s.close();
@@ -55,7 +55,7 @@ public class PostDaoImpl implements PostDao {
 	@Override
 	public List<Post> getPostsByGroupId(int id) {
 		Session s = HibernateUtil.getSession();
-		Query q = s.createQuery("from Post where Post.GROUP_ID = :groupId");
+		Query q = s.createQuery("from Post where Post.group.id = :groupId");
 		q.setInteger("groupId", id);
 		List<Post> posts = q.list();
 		s.close();

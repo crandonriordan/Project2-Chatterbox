@@ -2,6 +2,8 @@ package com.revature.models;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 @Entity
 @Table(name="USERS")
@@ -9,9 +11,11 @@ public class User {
 	
 	@Id
 	@Column(name="USER_ID")
+	@JsonProperty
 	private String id;
 	
 	@Column
+	@JsonProperty
 	private String nickname;
 
 	public User() {

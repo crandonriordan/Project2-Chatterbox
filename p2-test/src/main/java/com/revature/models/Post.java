@@ -28,7 +28,7 @@ public class Post {
 	@JsonProperty
 	private String content;
 	
-	@Column(name="IMAGE_URL")
+	@Column
 	@JsonProperty
 	private String imageUrl;
 	
@@ -39,7 +39,6 @@ public class Post {
 
 	public Post() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public Post(User user, String title, String content, String imageUrl, Group group) {
@@ -149,12 +148,6 @@ public class Post {
 		} else if (!user.equals(other.user))
 			return false;
 		return true;
-	}
-
-	@Override
-	public String toString() {
-		return "Post [id=" + id + ", user=" + user + ", title=" + title + ", content=" + content + ", imageUrl="
-				+ imageUrl + ", group=" + group + "]";
 	}
 
 	
