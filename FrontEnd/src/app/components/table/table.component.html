@@ -1,0 +1,37 @@
+<h4 *ngIf="auth.isAuthenticated()">
+  You are logged in!
+</h4>
+<h4 *ngIf="!auth.isAuthenticated()">
+  <a (click)="auth.login()">Login</a> and join our community today!
+</h4>
+<app-pagination></app-pagination>
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Group</th>
+      <th scope="col">Members</th>
+      <th scope="col">Posts</th>
+      <th scope="col">Votes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">90's kids</th>
+      <td>12</td>
+      <td>43</td>
+      <td>76</td>
+    </tr>
+    <tr>
+      <th scope="row">MCU fans</th>
+      <td>45</td>
+      <td>129</td>
+      <td>264</td>
+    </tr>
+    <tr>
+      <th scope="row">Fortnite</th>
+      <td>56</td>
+      <td>243</td>
+      <td>167</td>
+    </tr>
+  </tbody>
+</table>
