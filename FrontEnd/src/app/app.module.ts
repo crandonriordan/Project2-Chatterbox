@@ -17,6 +17,7 @@ import { PaginationComponent } from './components/pagination/pagination.componen
 
 import {DataTableModule} from "angular-6-datatable";
 import { PosttableComponent } from './components/posttable/posttable.component';
+import { NewpostComponent } from './components/newpost/newpost.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PosttableComponent } from './components/posttable/posttable.component';
     NavbarComponent,
     TableComponent,
     PaginationComponent,
-    PosttableComponent
+    PosttableComponent,
+    NewpostComponent
   ],
   imports: [
     BrowserModule,
