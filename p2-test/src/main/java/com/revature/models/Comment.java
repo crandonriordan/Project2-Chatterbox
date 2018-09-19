@@ -17,11 +17,11 @@ public class Comment {
 	private String content;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
-	@Column
+	@Column(name="POST_ID")
 	@JsonProperty
 	private Post post;
 	
-	@Column
+	@Column(name="USER_ID")
 	@JsonProperty
 	private User user;
 	
