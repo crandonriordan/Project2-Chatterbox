@@ -30,7 +30,7 @@ public class CommentDaoImpl implements CommentDao {
 	@Override
 	public List<Comment> getCommentsByUserId(String id) {
 		Session s = HibernateUtil.getSession();
-		Query q = s.createQuery("from Comment c where c.user.id = :userId");
+		Query q = s.createQuery("from Comment where Comment.USER_ID = :userId");
 		q.setString("userId", id);
 		List<Comment> comments = q.list();
 		s.close();

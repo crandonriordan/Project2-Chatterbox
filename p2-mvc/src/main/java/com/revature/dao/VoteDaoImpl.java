@@ -6,6 +6,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import com.revature.models.Comment;
 import com.revature.models.Vote;
 import com.revature.util.HibernateUtil;
 
@@ -31,7 +32,7 @@ public class VoteDaoImpl implements VoteDao {
 	@Override
 	public List<Vote> getVotesByUserId(String id) {
 		Session s = HibernateUtil.getSession();
-		Query q = s.createQuery("from Vote v where v.user.id = :userId");
+		Query q = s.createQuery("from Vote where Vote.USER_ID = :userId");
 		q.setString("userId", id);
 		List<Vote> votes = q.list();
 		s.close();
