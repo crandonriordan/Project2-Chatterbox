@@ -4,7 +4,7 @@ import { TestBed, async } from '@angular/core/testing';
 import { RouterModule, Router } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { AppComponent } from './app.component';
-import { AuthService } from './auth/auth.service';
+import { AuthService } from './services/auth/auth.service';
 
 describe('AppComponent', () => {
   beforeEach(() => {
