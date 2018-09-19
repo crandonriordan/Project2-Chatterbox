@@ -21,11 +21,11 @@ public class Vote {
 	@JsonProperty
 	private int id;
 	
-	@Column
+	@Column(name="USER_ID")
 	@JsonProperty
 	private User user;
 	
-	@Column
+	@Column(name = "POST_ID")
 	@JsonProperty
 	private Post post;
 	

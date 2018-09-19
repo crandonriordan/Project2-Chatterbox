@@ -6,6 +6,6 @@ import com.revature.models.Group;
 
 public interface GroupDao {
 	List<Group> getGroups();
-	Group getGroupsByUserId(String id);
+	Group getGroupById(int id);
 	int createGroup(Group group);
 }

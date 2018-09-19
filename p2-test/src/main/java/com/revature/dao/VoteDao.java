@@ -6,6 +6,7 @@ import com.revature.models.Vote;
 
 public interface VoteDao {
 	List<Vote> getVotes();
-	Vote getVotesByUserId(String id);
+	Vote getVoteById(int id);
+	List<Vote> getVotesByUserId(String id);
 	int createVote(Vote vote);
 }
