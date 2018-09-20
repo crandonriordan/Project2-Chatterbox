@@ -32,17 +32,17 @@ public class Driver {
 //		ud.createUser(new User("ggl-124", "bob1"));
 //		ud.createUser(new User("ggl-125", "bob2"));
 //		ud.createUser(new User("ggl-126", "bob3"));
-		User u1 = ud.getUserById("ggl-123");
-		User u2 = ud.getUserById("ggl-124");
+//		User u1 = ud.getUserById("ggl-123");
+//		User u2 = ud.getUserById("ggl-124");
 //		gd.createGroup(new Group("Test Group"));
 //		Group g1 = gd.getGroupByName("Test Group");
 //		pd.createPost(new Post(u1, "Title One", "This is a test post meant to see if our application works. I sure hope it does.", g1));
 //		pd.createPost(new Post(u1, "Title Two", "Jan, if you're reading this you're the best team leader ever. Thanks for all the awesome design stuff", g1));
 //		pd.createPost(new Post(u2, "Big Three", "LOREM IPSUMDasdffFfdsafsd SAFSDFASDFASDF ASfsdfasdfDFASDFASDF fsadfasdfASD", g1));
 
-		VoteId voteId = new VoteId("ggl-123", 3);
-		Vote vote = new Vote(voteId);
-		vd.createVote(vote);
+//		VoteId voteId = new VoteId("ggl-123", 3);
+//		Vote vote = new Vote(voteId);
+//		vd.createVote(vote);
 	}
 
 }
