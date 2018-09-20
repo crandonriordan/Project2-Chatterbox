@@ -1,6 +1,19 @@
 package com.revature.models;
 
-import javax.persistence.*;
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.Lob;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -11,12 +24,12 @@ public class Post {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="postSequence")
 	@SequenceGenerator(name="postSequence", allocationSize=1, sequenceName="SQ_POST_PK")
-	@Column(name="POST_ID")
+	@Column
 	@JsonProperty
 	private int id;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name="USER_ID")
+	@JoinColumn
 	@JsonProperty("user")
 	private User user;
 	
@@ -24,6 +37,7 @@ public class Post {
 	@JsonProperty
 	private String title;
 	
+	@Lob
 	@Column
 	@JsonProperty
 	private String content;
@@ -33,9 +47,14 @@ public class Post {
 	private String imageUrl;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name="GROUP_ID")
+	@JoinColumn
 	@JsonProperty("group")
 	private Group group;
+	
+	@OneToMany
+	@JoinColumn
+	@JsonProperty("votes")
+	private List<Vote> votes;
 
 	public Post() {
 		super();
@@ -47,6 +66,14 @@ public class Post {
 		this.title = title;
 		this.content = content;
 		this.imageUrl = imageUrl;
+		this.group = group;
+	}
+	
+	public Post(User user, String title, String content, Group group) {
+		super();
+		this.user = user;
+		this.title = title;
+		this.content = content;
 		this.group = group;
 	}
 

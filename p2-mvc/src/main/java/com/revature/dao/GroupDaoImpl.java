@@ -27,6 +27,18 @@ public class GroupDaoImpl implements GroupDao {
 		s.close();
 		return g;
 	}
+	
+	@Override
+	public Group getGroupByName(String name) {
+		Session s = HibernateUtil.getSession();
+		Query q = s.createQuery("from Group g where g.name = :userName");
+		q.setString("userName", name);
+		Group g = (Group) q.list().get(0);
+		s.close();
+		return g;
+	}
+	
+	
 
 	@Override
 	public int createGroup(Group group) {
@@ -36,5 +48,7 @@ public class GroupDaoImpl implements GroupDao {
 		tx.commit();
 		return groupPK;
 	}
+
+	
 
 }

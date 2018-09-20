@@ -5,18 +5,17 @@ import javax.persistence.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
-@Table
+@Table(name="GROUPS")
 public class Group {
 	
 	@Id
-	@OneToMany
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="groupSequence")
 	@SequenceGenerator(name="groupSequence", allocationSize=1, sequenceName="SQ_GROUP_PK")
-	@Column(name="GROUP_ID")
+	@Column
 	@JsonProperty
 	private int id;
 	
-	@Column(name="GROUP_NAME")
+	@Column
 	@JsonProperty
 	private String name;
 	
