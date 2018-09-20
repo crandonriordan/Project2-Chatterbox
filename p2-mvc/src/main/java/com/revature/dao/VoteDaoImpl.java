@@ -32,7 +32,7 @@ public class VoteDaoImpl implements VoteDao {
 	@Override
 	public List<Vote> getVotesByUserId(String id) {
 		Session s = HibernateUtil.getSession();
-		Query q = s.createQuery("from Vote where Vote.USER_ID = :userId");
+		Query q = s.createQuery("from Vote where Vote.user.id = :userId");
 		q.setString("userId", id);
 		List<Vote> votes = q.list();
 		s.close();

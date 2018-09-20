@@ -1,12 +1,6 @@
 package com.revature.models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -17,15 +11,18 @@ public class Vote {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="voteSequence")
 	@SequenceGenerator(name="voteSequence", allocationSize=1, sequenceName="SQ_VOTE_PK")
-	@Column(name="VOTE_ID")
+	@Column
 	@JsonProperty
 	private int id;
 	
-	@Column(name="USER_ID")
+	@ManyToOne
+	@JoinColumn
 	@JsonProperty
 	private User user;
 	
-	@Column(name = "POST_ID")
+	
+	@ManyToOne
+	@JoinColumn
 	@JsonProperty
 	private Post post;
 	
