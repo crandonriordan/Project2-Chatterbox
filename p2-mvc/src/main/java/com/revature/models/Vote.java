@@ -17,6 +17,9 @@ public class Vote {
 	@JsonProperty
 	private VoteId id;
 	
+	
+
+	
 	public Vote() {
 		super();
 	}
