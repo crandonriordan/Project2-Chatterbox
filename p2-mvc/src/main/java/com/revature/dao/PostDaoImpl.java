@@ -5,6 +5,7 @@ import java.util.List;
 import org.hibernate.*;
 
 import com.revature.models.Post;
+import com.revature.models.User;
 import com.revature.util.HibernateUtil;
 
 public class PostDaoImpl implements PostDao {
@@ -70,6 +71,14 @@ public class PostDaoImpl implements PostDao {
 		List<Post> posts = q.list();
 		s.close();
 		return posts;
+	}
+
+	@Override
+	public Post getPostById(int id) {
+		Session s = HibernateUtil.getSession();
+		Post post = (Post) s.get(Post.class, id);
+		s.close();
+		return post;
 	}
 
 	

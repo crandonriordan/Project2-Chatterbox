@@ -23,10 +23,6 @@ public class User {
 	@Column
 	@JsonProperty
 	private String nickname;
-	
-	@OneToMany(mappedBy="user")
-	@JsonProperty
-	private List<Vote> votes;
 
 	public User() {
 		super();

@@ -31,7 +31,7 @@ public class GroupDaoImpl implements GroupDao {
 	@Override
 	public Group getGroupByName(String name) {
 		Session s = HibernateUtil.getSession();
-		Query q = s.createQuery("from Group where Group.name = :userName");
+		Query q = s.createQuery("from Group g where g.name = :userName");
 		q.setString("userName", name);
 		Group g = (Group) q.list().get(0);
 		s.close();
