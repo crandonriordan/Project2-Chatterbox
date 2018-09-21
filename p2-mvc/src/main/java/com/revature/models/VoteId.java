@@ -5,13 +5,17 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 @Embeddable
 public class VoteId implements Serializable {
 	private static final long serialVersionUID = 5247805843178305182L;
 	
+	@JsonProperty
 	@Column
 	private String userId;
 	
+	@JsonProperty
 	@Column
 	private int postId;
 

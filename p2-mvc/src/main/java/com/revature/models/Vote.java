@@ -9,13 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @Table
 public class Vote {
 
-	// @Id
-	// @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="voteSequence")
-	// @SequenceGenerator(name="voteSequence", allocationSize=1, sequenceName="SQ_VOTE_PK")
-	
 	@EmbeddedId
-	// @Column
-	@JsonBackReference
 	@JsonProperty
 	private VoteId id;
 	

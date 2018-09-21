@@ -52,10 +52,10 @@ public class Post {
 	@JsonProperty("group")
 	private Group group;
 	
-	@JsonManagedReference
 	@OneToMany(fetch=FetchType.EAGER, mappedBy="id.postId")
 	@JsonProperty("votes")
 	private List<Vote> votes;
+	
 	
 	@OneToMany(fetch=FetchType.EAGER, mappedBy="post")
 	@JsonProperty("comments")

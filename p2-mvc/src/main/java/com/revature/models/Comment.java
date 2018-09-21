@@ -19,7 +19,7 @@ public class Comment {
 	@JsonProperty
 	private String content;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JsonIgnore
 	private Post post;
 	
