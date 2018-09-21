@@ -15,8 +15,11 @@ import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import org.springframework.stereotype.Component;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@Component
 @Entity
 @Table
 public class Post {
@@ -51,10 +54,13 @@ public class Post {
 	@JsonProperty("group")
 	private Group group;
 	
-	@OneToMany
-	@JoinColumn
+	@OneToMany(fetch=FetchType.EAGER, mappedBy="id")
 	@JsonProperty("votes")
 	private List<Vote> votes;
+	
+	@OneToMany(fetch=FetchType.EAGER, mappedBy="post")
+	@JsonProperty("comments")
+	private List<Comment> comments;
 
 	public Post() {
 		super();
@@ -76,6 +82,8 @@ public class Post {
 		this.content = content;
 		this.group = group;
 	}
+
+	
 
 	public int getId() {
 		return id;
@@ -123,6 +131,24 @@ public class Post {
 
 	public void setGroup(Group group) {
 		this.group = group;
+	}
+
+	public List<Vote> getVotes() {
+		return votes;
+	}
+
+	public void setVotes(List<Vote> votes) {
+		this.votes = votes;
+	}
+	
+	
+
+	public List<Comment> getComments() {
+		return comments;
+	}
+
+	public void setComments(List<Comment> comments) {
+		this.comments = comments;
 	}
 
 	@Override
