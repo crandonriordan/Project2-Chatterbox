@@ -43,11 +43,8 @@ public class Driver {
 //		pd.createPost(new Post(u1, "Title Two", "Jan, if you're reading this you're the best team leader ever. Thanks for all the awesome design stuff", g1));
 //		pd.createPost(new Post(u2, "Big Three", "LOREM IPSUMDasdffFfdsafsd SAFSDFASDFASDF ASfsdfasdfDFASDFASDF fsadfasdfASD", g1));
 
-//		VoteId voteId = new VoteId("ggl-123", 3);
-//		Vote vote = new Vote(voteId);
-//		vd.createVote(vote);
-		
-		
+
+
 		
 		
 		// public Group(String name)
@@ -58,13 +55,13 @@ public class Driver {
 		// public Vote(VoteId id)
 		
 		Group g1 = new Group("Coding");
-		Group g2 = new Group("Water Polo");
+		Group g2 = new Group("WaterPolo");
 		Group g3 = new Group("Basketball");
 		Group g4 = new Group("Knitting");
 		Group g5 = new Group("Cars");
-		Group g6 = new Group("Grape Juice Connoiseurs");
-		Group g7 = new Group("Sky Watching");
-		Group g8 = new Group("Proud to be Women");
+		Group g6 = new Group("GrapeJuiceConnoiseurs");
+		Group g7 = new Group("SkyWatching");
+		Group g8 = new Group("ProudToBeWomen");
 		
 		gd.createGroup(g1);
 		gd.createGroup(g2);
@@ -125,7 +122,7 @@ public class Driver {
 		Comment c1 = new Comment("That's right. Papa don't preach.", p4, u2);
 		Comment c2 = new Comment("I never made it to the school choir because the music teacher didn't like my voice. I was pretty sad. But he was probably right; I did have a voice a bit like a goat, but my dad told me to never give up and to keep going, and it's paid off.\r\n", p4, u6);
 		Comment c3 = new Comment("I just want to be the only girl in the world.", p4, u8);
-		
+
 	}
 
 }

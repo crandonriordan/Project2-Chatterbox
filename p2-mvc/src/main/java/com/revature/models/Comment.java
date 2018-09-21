@@ -2,6 +2,9 @@ package com.revature.models;
 
 import javax.persistence.*;
 
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -21,8 +24,8 @@ public class Comment {
 	@JsonProperty
 	private String content;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JsonProperty
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JsonIgnore
 	private Post post;
 	
 	@ManyToOne

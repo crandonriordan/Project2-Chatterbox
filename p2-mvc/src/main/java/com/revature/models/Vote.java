@@ -6,6 +6,7 @@ import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Component
@@ -13,12 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @Table
 public class Vote {
 
-	// @Id
-	// @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="voteSequence")
-	// @SequenceGenerator(name="voteSequence", allocationSize=1, sequenceName="SQ_VOTE_PK")
-	
 	@EmbeddedId
-	// @Column
 	@JsonProperty
 	private VoteId id;
 	

@@ -15,6 +15,9 @@ import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -54,9 +57,10 @@ public class Post {
 	@JsonProperty("group")
 	private Group group;
 	
-	@OneToMany(fetch=FetchType.EAGER, mappedBy="id")
+	@OneToMany(fetch=FetchType.EAGER, mappedBy="id.postId")
 	@JsonProperty("votes")
 	private List<Vote> votes;
+	
 	
 	@OneToMany(fetch=FetchType.EAGER, mappedBy="post")
 	@JsonProperty("comments")
