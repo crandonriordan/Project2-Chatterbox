@@ -4,11 +4,13 @@ import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@Entity
+@Table(name="COMMENTS")
 public class Comment {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="commentSequence")
 	@SequenceGenerator(name="commentSequence", allocationSize=1, sequenceName="SQ_COMMENT_PK")
-	@Column(name="COMMENT_ID")
+	@Column
 	@JsonProperty
 	private int id;
 	
@@ -16,12 +18,11 @@ public class Comment {
 	@JsonProperty
 	private String content;
 	
-	@ManyToOne(fetch = FetchType.EAGER)
-	@Column(name="POST_ID")
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JsonProperty
 	private Post post;
 	
-	@Column(name="USER_ID")
+	@ManyToOne
 	@JsonProperty
 	private User user;
 	

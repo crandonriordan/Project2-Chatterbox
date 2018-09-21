@@ -1,13 +1,18 @@
 package com.revature.util;
 
-import java.util.List;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.revature.dao.CommentDao;
+import com.revature.dao.CommentDaoImpl;
+import com.revature.dao.GroupDao;
+import com.revature.dao.GroupDaoImpl;
 import com.revature.dao.PostDao;
 import com.revature.dao.PostDaoImpl;
 import com.revature.dao.UserDao;
 import com.revature.dao.UserDaoImpl;
-import com.revature.models.Post;
+import com.revature.dao.VoteDao;
+import com.revature.dao.VoteDaoImpl;
+import com.revature.models.User;
+import com.revature.models.Vote;
+import com.revature.models.VoteId;
 
 
 public class Driver {
@@ -20,27 +25,24 @@ public class Driver {
 		// create some users
 		UserDao ud = new UserDaoImpl();
 		PostDao pd = new PostDaoImpl();
-		
+		CommentDao cd = new CommentDaoImpl();
+		GroupDao gd = new GroupDaoImpl();
+		VoteDao vd = new VoteDaoImpl();
 //		ud.createUser(new User("ggl-123", "bob"));
 //		ud.createUser(new User("ggl-124", "bob1"));
 //		ud.createUser(new User("ggl-125", "bob2"));
 //		ud.createUser(new User("ggl-126", "bob3"));
-//		ud.createUser(new User("ggl-127", "bob4"));
-//		ud.createUser(new User("ggl-128", "bob5"));
 //		User u1 = ud.getUserById("ggl-123");
 //		User u2 = ud.getUserById("ggl-124");
-//		System.out.println(u1);
-//		System.out.println(u2);
-//		pd.createPost(new Post(u1, "Big Bob", "LOREM asdf asdfsadfdsasdfSAFSDasdfasdfFASDFASDasdfF asdfasdf ASD"));
-//		pd.createPost(new Post(u1, "Title 2", "LOREM IPSdfaUMDF SAFSDFASDFASDF ASDFASDFASDF ASD"));
-//		pd.createPost(new Post(u1, "Big Bob", "LOREM IPSUMDasdffFfdsafsd SAFSDFASDFASDF ASfsdfasdfDFASDFASDF fsadfasdfASD"));
-//		pd.createPost(new Post(u1, "Big Bob", "LOREM IPSasUdfF SAFSDFASDFASDF ASDFAasdfasdfSDFASDF ASD"));
-//		pd.createPost(new Post(u1, "Title", "LOREM asdfasdfIPasdfSUMDF SAasDFASDF ASDFASDasdfasdfFASDF ASD"));
-//		pd.createPost(new Post(u1, "Big Bob", "LOREM IPSUMDF SasdfasdfAFSasdfsadfDFASDFASDF ASDFASDFASDF ASD"));
-//		pd.createPost(new Post(u1, "Big Bob", "LOREM IPSUMDFasdf SAFSDFASDFASDasdfasdfF ASDFASDFASDF ASD"));
-//		List<Post> posts = pd.getPosts();
-//		System.out.println(posts);
-//		ObjectMapper om = new ObjectMapper();
+//		gd.createGroup(new Group("Test Group"));
+//		Group g1 = gd.getGroupByName("Test Group");
+//		pd.createPost(new Post(u1, "Title One", "This is a test post meant to see if our application works. I sure hope it does.", g1));
+//		pd.createPost(new Post(u1, "Title Two", "Jan, if you're reading this you're the best team leader ever. Thanks for all the awesome design stuff", g1));
+//		pd.createPost(new Post(u2, "Big Three", "LOREM IPSUMDasdffFfdsafsd SAFSDFASDFASDF ASfsdfasdfDFASDFASDF fsadfasdfASD", g1));
+
+//		VoteId voteId = new VoteId("ggl-123", 3);
+//		Vote vote = new Vote(voteId);
+//		vd.createVote(vote);
 	}
 
 }
