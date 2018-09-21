@@ -1,9 +1,14 @@
 package com.revature.models;
 
-import javax.persistence.*;
+import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@Component
 @Entity
 @Table
 public class Vote {
