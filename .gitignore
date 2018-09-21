@@ -3,4 +3,3 @@
 .sonarlint
 .setting
 pom.properties
-hibernate.cfg.xml
