@@ -2,9 +2,14 @@ package com.revature.models;
 
 import javax.persistence.*;
 
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import org.springframework.stereotype.Component;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@Component
 @Entity
 @Table(name="COMMENTS")
 public class Comment {

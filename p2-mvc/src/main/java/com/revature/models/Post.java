@@ -15,9 +15,14 @@ import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+import org.springframework.stereotype.Component;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@Component
 @Entity
 @Table
 public class Post {
