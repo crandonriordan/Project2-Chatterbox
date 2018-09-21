@@ -9,23 +9,44 @@ import org.springframework.web.bind.annotation.*;
 import com.revature.models.Post;
 import com.revature.services.PostService;
 
-@Controller
+@RestController
 public class PostController {
 	
 	@Autowired
 	PostService postService;
 	
 	@GetMapping(value="/api/posts")
-	@ResponseBody
 	public List<Post> getAllPosts() {
 		return postService.findAllPosts();
 	}
 	
 	@GetMapping(value="/api/posts/{name}")
-	@ResponseBody
 	public List<Post> getAllPostsByGroupName(@PathVariable("name") String name) {
 		return postService.findPostsByGroupName(name);
 	}
+	
+	@PostMapping(value="/api/posts/{name}", consumes = "application/json", produces = "application/json")
+	public Post addPost(@RequestBody Post post) {
+		return postService.createPost(post);
+	}
+	
+	@PutMapping(value="/api/posts/{name}")
+	public String updatePost(@PathVariable("name") String name) {
+		return "Not supported";
+	}
+	
+	@DeleteMapping(value="/api/posts/{name}", produces="application/json")
+	public Post deletePost(@RequestBody Post post) {
+		postService.deletePost(post);
+		return post;		
+	}
+	
+	@RequestMapping(value="/api/posts/{name}", method={RequestMethod.HEAD, RequestMethod.OPTIONS, 
+			RequestMethod.PATCH, RequestMethod.TRACE})
+	public String notSupported() {
+		return "not supported";
+	}
+	
 	
 	
 	
