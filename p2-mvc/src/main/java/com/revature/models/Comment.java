@@ -2,6 +2,7 @@ package com.revature.models;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
@@ -19,7 +20,7 @@ public class Comment {
 	private String content;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JsonProperty
+	@JsonIgnore
 	private Post post;
 	
 	@ManyToOne

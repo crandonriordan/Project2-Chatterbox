@@ -2,6 +2,7 @@ package com.revature.models;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
@@ -14,6 +15,7 @@ public class Vote {
 	
 	@EmbeddedId
 	// @Column
+	@JsonBackReference
 	@JsonProperty
 	private VoteId id;
 	

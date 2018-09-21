@@ -15,6 +15,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
@@ -51,7 +52,8 @@ public class Post {
 	@JsonProperty("group")
 	private Group group;
 	
-	@OneToMany(fetch=FetchType.EAGER, mappedBy="id")
+	@JsonManagedReference
+	@OneToMany(fetch=FetchType.EAGER, mappedBy="id.postId")
 	@JsonProperty("votes")
 	private List<Vote> votes;
 	

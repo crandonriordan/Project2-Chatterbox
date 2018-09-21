@@ -43,6 +43,8 @@ public class Driver {
 //		VoteId voteId = new VoteId("ggl-123", 3);
 //		Vote vote = new Vote(voteId);
 //		vd.createVote(vote);
+		
+		System.out.println(pd.getPostsByGroupName("TestGroup"));
 	}
 
 }
