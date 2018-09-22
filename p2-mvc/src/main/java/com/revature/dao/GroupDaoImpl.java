@@ -33,6 +33,11 @@ public class GroupDaoImpl implements GroupDao {
 		Session s = HibernateUtil.getSession();
 		Query q = s.createQuery("from Group g where g.name = :userName");
 		q.setString("userName", name);
+		// avoiding index out of bounds exception
+		if(q.list().size() == 0) {
+			return null;
+		}
+		
 		Group g = (Group) q.list().get(0);
 		s.close();
 		return g;
@@ -45,6 +50,16 @@ public class GroupDaoImpl implements GroupDao {
 		Session s = HibernateUtil.getSession();
 		Transaction tx = s.beginTransaction();
 		int groupPK = (int) s.save(group);
+		s.close();
+		tx.commit();
+		return group;
+	}
+
+	@Override
+	public Group updateGroup(Group group) {
+		Session s = HibernateUtil.getSession();
+		Transaction tx = s.beginTransaction();
+		s.update(group);
 		s.close();
 		tx.commit();
 		return group;
