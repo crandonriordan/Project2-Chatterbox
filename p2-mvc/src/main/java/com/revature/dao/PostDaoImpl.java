@@ -81,6 +81,15 @@ public class PostDaoImpl implements PostDao {
 		return post;
 	}
 
+	@Override
+	public void deletePost(Post post) {
+		Session s = HibernateUtil.getSession();
+		Transaction tx = s.beginTransaction();
+		System.out.println("Deleting");
+		s.delete(post);
+		tx.commit();
+		s.close();
+	}
 	
 
 }

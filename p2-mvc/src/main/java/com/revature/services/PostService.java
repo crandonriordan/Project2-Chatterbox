@@ -26,6 +26,16 @@ public class PostService {
 		List<Post> posts = pd.getPostsByGroupName(name);
 		return posts;
 	}
+	
+	public Post createPost(Post post) {
+		pd.createPost(post);
+		return post;
+	}
+	
+	public Post deletePost(Post post) {
+		pd.deletePost(post);
+		return post;
+	}
 
 	@Override
 	public int hashCode() {

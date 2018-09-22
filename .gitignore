@@ -2,3 +2,4 @@
 /.recommenders
 .sonarlint
 .setting
+pom.properties

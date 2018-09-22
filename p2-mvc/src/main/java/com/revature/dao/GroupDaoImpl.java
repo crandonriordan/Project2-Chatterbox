@@ -41,12 +41,13 @@ public class GroupDaoImpl implements GroupDao {
 	
 
 	@Override
-	public int createGroup(Group group) {
+	public Group createGroup(Group group) {
 		Session s = HibernateUtil.getSession();
 		Transaction tx = s.beginTransaction();
 		int groupPK = (int) s.save(group);
+		s.close();
 		tx.commit();
-		return groupPK;
+		return group;
 	}
 
 	
