@@ -8,5 +8,5 @@ public interface GroupDao {
 	List<Group> getGroups();
 	Group getGroupById(int id);
 	Group getGroupByName(String name);
-	int createGroup(Group group);
+	Group createGroup(Group group);
 }

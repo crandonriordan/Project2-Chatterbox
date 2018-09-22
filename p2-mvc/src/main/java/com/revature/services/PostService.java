@@ -36,10 +36,6 @@ public class PostService {
 		pd.deletePost(post);
 		return post;
 	}
-	
-	public void deletePostById(int id) {
-		pd.deleteByPostId(id);
-	}
 
 	@Override
 	public int hashCode() {
