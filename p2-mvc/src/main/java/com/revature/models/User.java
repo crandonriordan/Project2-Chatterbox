@@ -7,6 +7,7 @@ import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 
@@ -23,6 +24,10 @@ public class User {
 	@Column
 	@JsonProperty
 	private String nickname;
+	
+	@Column
+	@JsonIgnore
+	private String role;
 
 	public User() {
 		super();
