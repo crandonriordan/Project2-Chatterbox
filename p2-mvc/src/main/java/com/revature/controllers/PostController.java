@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import com.revature.models.Post;
 import com.revature.services.PostService;
 
+@CrossOrigin
 @RestController
 public class PostController {
 	
