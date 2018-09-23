@@ -80,6 +80,16 @@ public class PostDaoImpl implements PostDao {
 		s.close();
 		return post;
 	}
+	
+	@Override 
+	public Post updatePost(Post post) {
+		Session s = HibernateUtil.getSession();
+		Transaction tx = s.beginTransaction();
+		s.update(post);
+		tx.commit();
+		s.close();
+		return post;
+	}
 
 	@Override
 	public void deletePost(Post post) {
