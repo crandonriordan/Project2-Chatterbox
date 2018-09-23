@@ -27,8 +27,17 @@ public class PostService {
 		return posts;
 	}
 	
+	public Post findPostById(int id) {
+		return pd.getPostById(id);
+	}
 	public Post createPost(Post post) {
 		pd.createPost(post);
+		return post;
+	}
+	
+	public Post updatePost(Post post) {
+		System.out.println("Updating post: " + post);
+		pd.updatePost(post);
 		return post;
 	}
 	

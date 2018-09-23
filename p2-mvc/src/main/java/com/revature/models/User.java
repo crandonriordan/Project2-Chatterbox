@@ -28,12 +28,9 @@ public class User {
 	@Column
 	@JsonProperty
 	private String nickname;
-<<<<<<< Updated upstream
-=======
 	
 	@ManyToMany(fetch = FetchType.EAGER, mappedBy="users")
 	List<Group> groups = new ArrayList<Group>();
->>>>>>> Stashed changes
 
 	public User() {
 		super();
