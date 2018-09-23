@@ -36,6 +36,16 @@ public class CommentDaoImpl implements CommentDao {
 		s.close();
 		return comments;
 	}
+	
+	@Override
+	public List<Comment> getCommentsByPostId(int id) {
+		Session s = HibernateUtil.getSession();
+		Query q = s.createQuery("from Comment c where c.post.id = :postId");
+		q.setInteger("postId", id);
+		List<Comment> comments = q.list();
+		s.close();
+		return comments;
+	}
 
 	@Override
 	public int createComment(Comment comment) {
@@ -45,5 +55,14 @@ public class CommentDaoImpl implements CommentDao {
 		tx.commit();
 		s.close();
 		return commentPK;
+	}
+	
+	@Override
+	public void deleteComment(Comment comment) {
+		Session s = HibernateUtil.getSession();
+		Transaction tx = s.beginTransaction();
+		s.delete(comment);
+		tx.commit();
+		s.close();
 	}
 }

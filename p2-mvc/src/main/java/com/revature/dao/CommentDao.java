@@ -11,4 +11,6 @@ public interface CommentDao {
 	List<Comment> getCommentsByUserId(String id);
 	Comment getCommentById(int id);
 	int createComment(Comment comment);
+	List<Comment> getCommentsByPostId(int id);
+	void deleteComment(Comment comment);
 }
