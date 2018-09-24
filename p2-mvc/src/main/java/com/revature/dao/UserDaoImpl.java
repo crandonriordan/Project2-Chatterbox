@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.hibernate.*;
 
+import com.revature.models.Group;
 import com.revature.models.Post;
 import com.revature.models.User;
 import com.revature.util.HibernateUtil;
@@ -32,7 +33,15 @@ public class UserDaoImpl implements UserDao {
 		return userPK;
 	}
 
-	@Override
+	public User updateUser(User user) {
+		Session s = HibernateUtil.getSession();
+		Transaction tx = s.beginTransaction();
+		s.update(user);
+		tx.commit();
+		s.close();
+		return user;
+	}
+
 	public void deleteUser(User user) {
 		Session s = HibernateUtil.getSession();
 		Transaction tx = s.beginTransaction();

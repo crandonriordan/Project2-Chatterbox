@@ -10,4 +10,5 @@ public interface GroupDao {
 	Group getGroupByName(String name);
 	Group createGroup(Group group);
 	void deleteGroup(Group group);
+	Group updateGroup(Group group);
 }

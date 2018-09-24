@@ -13,4 +13,5 @@ public interface PostDao {
 	List<Post> getPostsByGroupName(String name);
 	int createPost(Post post);
 	void deletePost(Post post);
+	Post updatePost(Post post);
 }
