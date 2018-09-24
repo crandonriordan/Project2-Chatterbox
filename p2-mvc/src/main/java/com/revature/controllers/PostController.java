@@ -52,6 +52,7 @@ public class PostController {
 	
 	@PostMapping("/api/groups/{name}/posts")
 	public Post getPostById(@PathVariable("name") String name, @RequestBody Post post) {
+		System.out.println(post.getUser());
 		Group group = new Group();
 		GroupDao gd = new GroupDaoImpl();
 		group = gd.getGroupByName(name);
