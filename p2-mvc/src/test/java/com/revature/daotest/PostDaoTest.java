@@ -1,10 +1,11 @@
 package com.revature.daotest;
 
+import static org.junit.Assert.*;
+
 import org.apache.log4j.Logger;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import com.revature.dao.PostDaoImpl;
-import com.revature.models.Post;
 
 public class PostDaoTest {
 	static final Logger logger = Logger.getLogger(CommentDaoTest.class);
@@ -12,49 +13,48 @@ public class PostDaoTest {
 	PostDaoImpl pdi = new PostDaoImpl();
 	
 	@Test
-	public void getPostById(int id) {
-		// pdi.getPostById(id);
-		// assert
+	public void getPostById() {
+		String expected = "Go Browns!";
+		String actual = pdi.getPostById(1).getTitle();
+		assertEquals(actual, expected);
 	}
 	
 	@Test
 	public void getPosts() {
-		// pdi.getPosts();
-		// assert
+		assertEquals(3, pdi.getPosts().size());
 	}
 	
 	@Test
-	public void getPostsByPage(int page) {
+	public void getPostsByPage() {
 		// pdi.getPostsByPage(page);
 		// assert
 	}
 	
 	@Test
-	public void getPostsByUserId(String id) {
+	public void getPostsByUserId() {
 		// pdi.getPostsByUserId(id);
 		// assert
 	}
 	
 	@Test
-	public void getPostsByGroupId(int id) {
+	public void getPostsByGroupId() {
 		// pdi.getPostsByGroupId(id);
 		// assert
 	}
 	
 	@Test
-	public void getPostsByGroupName(String name) {
-		// pdi.getPostsByGroupName(name);
-		// assert
+	public void getPostsByGroupName() {
+		assertNotNull(pdi.getPostsByGroupName("Go Browns!"));
 	}
 	
 	@Test
-	public void createPost(Post post) {
+	public void createPost() {
 		// pdi.createPost(post);
 		// assert
 	}
 	
 	@Test
-	public void deletePost(Post post) {
+	public void deletePost() {
 		// pdi.deletePost(post);
 		// assert
 	}

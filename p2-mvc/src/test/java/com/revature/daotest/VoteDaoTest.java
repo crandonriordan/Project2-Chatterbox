@@ -1,35 +1,35 @@
 package com.revature.daotest;
 
-import org.apache.log4j.Logger;
-import org.junit.jupiter.api.Test;
+import static org.junit.Assert.assertEquals;
 
-import com.revature.models.Vote;
+import org.apache.log4j.Logger;
+import org.junit.Test;
+
+import com.revature.dao.VoteDaoImpl;
 
 public class VoteDaoTest {
 	static final Logger logger = Logger.getLogger(CommentDaoTest.class);
 	
-	VoteDaoTest vdi = new VoteDaoTest();
+	VoteDaoImpl vdi = new VoteDaoImpl();
 	
 	@Test
 	public void getVotes() {
-		// vdi.getVotes();
-		// assert
+		assertEquals(9, vdi.getVotes().size());
 	}
 	
 	@Test
-	public void getVoteById(int id) {
+	public void getVoteById() {
 		// vdi.getVoteById(id);
 		// assert
 	}
 	
 	@Test
-	public void getVotesByUserId(String id) {
-		// vdi.getVotesByUserId(id);
-		// assert
+	public void getVotesByUserId() {
+		// assertEquals(1, vdi.getVotesByUserId("ggl-135").size());
 	}
 	
 	@Test
-	public void createVote(Vote vote) {
+	public void createVote() {
 		// vdi.createVote(vote);
 		// assert
 	}

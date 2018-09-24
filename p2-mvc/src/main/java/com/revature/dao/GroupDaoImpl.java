@@ -7,6 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import com.revature.models.Group;
+import com.revature.models.Post;
 import com.revature.util.HibernateUtil;
 
 public class GroupDaoImpl implements GroupDao {
@@ -50,12 +51,19 @@ public class GroupDaoImpl implements GroupDao {
 		Session s = HibernateUtil.getSession();
 		Transaction tx = s.beginTransaction();
 		int groupPK = (int) s.save(group);
-		s.close();
 		tx.commit();
+		s.close();
 		return group;
 	}
 
 	@Override
+	public void deleteGroup(Group group) {
+		Session s = HibernateUtil.getSession();
+		Transaction tx = s.beginTransaction();
+		s.delete(group);
+		tx.commit();
+		s.close();
+	}
 	public Group updateGroup(Group group) {
 		Session s = HibernateUtil.getSession();
 		Transaction tx = s.beginTransaction();
@@ -64,7 +72,5 @@ public class GroupDaoImpl implements GroupDao {
 		tx.commit();
 		return group;
 	}
-
-	
 
 }
