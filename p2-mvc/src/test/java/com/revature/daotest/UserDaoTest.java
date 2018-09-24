@@ -1,9 +1,7 @@
 package com.revature.daotest;
 
 import org.apache.log4j.Logger;
-import org.junit.jupiter.api.Test;
-
-import com.revature.models.User;
+import org.junit.Test;
 
 public class UserDaoTest {
 	static final Logger logger = Logger.getLogger(CommentDaoTest.class);
@@ -11,19 +9,19 @@ public class UserDaoTest {
 	UserDaoTest udi = new UserDaoTest();
 	
 	@Test
-	public void createUser(User user) {
+	public void createUser() {
 		// udi.createUser(user);
 		// assert
 	}
 	
 	@Test
-	public void deleteUser(User user) {
+	public void deleteUser() {
 		// udi.deleteUser(user);
 		// assert
 	}
 	
 	@Test
-	public void getUserById(String id) {
+	public void getUserById() {
 		// udi.getUserById(id);
 		// assert
 	}

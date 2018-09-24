@@ -3,7 +3,7 @@ package com.revature.daotest;
 import static org.junit.Assert.*;
 
 import org.apache.log4j.Logger;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import com.revature.dao.GroupDaoImpl;
 import com.revature.models.Group;

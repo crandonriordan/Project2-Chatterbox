@@ -2,23 +2,16 @@ package com.revature.daotest;
 
 import static org.junit.Assert.assertEquals;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.apache.log4j.Logger;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import com.revature.dao.CommentDaoImpl;
-import com.revature.models.Comment;
-import com.revature.models.Group;
-import com.revature.models.Post;
-import com.revature.models.User;
 
 public class CommentDaoTest {
 	static final Logger logger = Logger.getLogger(CommentDaoTest.class);
 	CommentDaoImpl cdi = new CommentDaoImpl();
 	
-	// @Test 
+	@Test 
 	public void getComments() {
 		assertEquals(3, cdi.getComments().size());
 	}
