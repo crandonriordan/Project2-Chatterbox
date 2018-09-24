@@ -5,12 +5,12 @@
 
 <hibernate-configuration>
 	<session-factory>
-		<property name="hibernate.connection.url">jdbc:oracle:thin:@project-zero.ced7fvnhpfjw.us-west-2.rds.amazonaws.com:1521:ORCL</property>
-		<property name="hibernate.connection.username">crandon</property>
-		<property name="hibernate.connection.password">RevaturE1!</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@revaturesinhacdbinstance.caw8qcboduuv.us-east-2.rds.amazonaws.com:1521:ORCL</property>
+		<property name="hibernate.connection.username">sinhac</property>
+		<property name="hibernate.connection.password">da1du!us</property>
 		
 		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
-		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.hbm2ddl.auto">validate</property>
 		<property name="hibernate.show_sql">true</property>
 		<mapping class="com.revature.models.Post" />
 		<mapping class="com.revature.models.User" />
