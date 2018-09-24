@@ -12,6 +12,7 @@ import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 
@@ -31,6 +32,10 @@ public class User {
 	
 	@ManyToMany(fetch = FetchType.EAGER, mappedBy="users")
 	List<Group> groups = new ArrayList<Group>();
+	
+	@Column
+	@JsonIgnore
+	private String role;
 
 	public User() {
 		super();
