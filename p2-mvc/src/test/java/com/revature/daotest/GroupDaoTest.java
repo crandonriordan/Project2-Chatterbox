@@ -1,5 +1,7 @@
 package com.revature.daotest;
 
+import static org.junit.Assert.*;
+
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.Test;
 
@@ -13,25 +15,52 @@ public class GroupDaoTest {
 	
 	@Test 
 	public void getGroups() {
-		// gdi.getGroups();
-		// assert
+		assertEquals(8, gdi.getGroups().size());
 	}
 	
 	@Test
-	public void getGroupById(int id) {
-		// gdi.getGroupById(id);
-		// assert
+	public void getGroupById() {
+		String expected = "knitting";
+		String actual = gdi.getGroupById(4).getName().toLowerCase();
+		assertEquals(actual, expected);
 	}
 	
 	@Test
-	public void getGroupByName(String name) {
-		// gdi.getGroupByName(name);
-		// assert
+	public void getGroupByIdThatDoesNotExist() {
+		assertNull(gdi.getGroupById(-1));
 	}
 	
 	@Test
-	public void createGroup(Group group) {
-		// gdi.createGroup(group);
-		// assert
+	public void getGroupByName() {
+		String expectedName = "basketball";
+		String actualName = gdi.getGroupByName("Basketball").getName().toLowerCase();
+		assertEquals(actualName, expectedName);
 	}
+	
+	@Test
+	public void getGroupByNameThatDoesNotExist() {
+		assertNull(gdi.getGroupByName("gardening"));
+	}
+	
+	@Test
+	public void createGroup() {
+		Group g = new Group("TestGroup");
+		gdi.createGroup(g);
+		String result = gdi.getGroupByName("TestGroup").getName().toLowerCase();
+		assertEquals("testgroup", result);
+	}
+	
+	// TODO: Test that attempts to create a group that already exists
+	
+	/*
+	@Test
+	public void deleteGroup() {
+		int sizeBefore = gdi.getGroups().size();
+		gdi.deleteGroup(new Group("TestGroup"));
+		int sizeAfter = gdi.getGroups().size();
+		assertEquals(sizeBefore-1, sizeAfter);
+	}
+	*/
+	
+	// TODO: Test that attempts to delete a group that does not exist
 }

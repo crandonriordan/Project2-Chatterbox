@@ -54,6 +54,8 @@ public class Driver {
 		// public VoteId(String userId, int postId)
 		// public Vote(VoteId id)
 		
+		
+		/*
 		Group g1 = new Group("Coding");
 		Group g2 = new Group("WaterPolo");
 		Group g3 = new Group("Basketball");
@@ -122,7 +124,32 @@ public class Driver {
 		Comment c1 = new Comment("That's right. Papa don't preach.", p4, u2);
 		Comment c2 = new Comment("I never made it to the school choir because the music teacher didn't like my voice. I was pretty sad. But he was probably right; I did have a voice a bit like a goat, but my dad told me to never give up and to keep going, and it's paid off.\r\n", p4, u6);
 		Comment c3 = new Comment("I just want to be the only girl in the world.", p4, u8);
-
+		
+		cd.createComment(c1);
+		cd.createComment(c2);
+		cd.createComment(c3);
+		
+		// public VoteId(String userId, int postId)
+		Vote v1 = new Vote(new VoteId("ggl-126", 3));
+		Vote v2 = new Vote(new VoteId("ggl-127", 3));
+		Vote v3 = new Vote(new VoteId("ggl-129", 3));
+		Vote v4 = new Vote(new VoteId("ggl-130", 3));
+		Vote v5 = new Vote(new VoteId("ggl-131", 3));
+		Vote v6 = new Vote(new VoteId("ggl-132", 3));
+		Vote v7 = new Vote(new VoteId("ggl-135", 3));
+		Vote v8 = new Vote(new VoteId("ggl-138", 3));
+		Vote v9 = new Vote(new VoteId("ggl-141", 3));
+		
+		vd.createVote(v1);
+		vd.createVote(v2);
+		vd.createVote(v3);
+		vd.createVote(v4);
+		vd.createVote(v5);
+		vd.createVote(v6);
+		vd.createVote(v7);
+		vd.createVote(v8);
+		vd.createVote(v9);
+		*/
 	}
 
 }
