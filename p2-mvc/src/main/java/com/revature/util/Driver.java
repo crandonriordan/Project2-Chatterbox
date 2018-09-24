@@ -124,11 +124,11 @@ public class Driver {
 //		Comment c3 = new Comment("I just want to be the only girl in the world.", p4, u8);
 
 		
-		Group group = gd.getGroupByName("TestGroup");
-		User user = new User("twt-512342", "testTwoUser");
-		group.addUser(user);
-		gd.updateGroup(group);
-		System.out.println("test group " + gd.getGroupByName("TestGroup"));
+//		Group group = gd.getGroupByName("TestGroup");
+//		User user = new User("twt-512342", "testTwoUser");
+//		group.addUser(user);
+//		gd.updateGroup(group);
+//		System.out.println("test group " + gd.getGroupByName("TestGroup"));
 
 //		user.addGroup(group);
 //		ud.createUser(user);
