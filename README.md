@@ -1,7 +1,7 @@
 l# Chatterbox
 
 Contributors:
-* Jan Balangue - Team Lead
+* Jan Balangue - Lead
 * Crandon Riordan
 * Chandrika Sinha
 # jenkins-startup
