@@ -97,7 +97,6 @@ public class Driver {
 		ud.createUser(u15);
 		ud.createUser(u16);
 		ud.createUser(u17);
-=======
 //		Group g1 = new Group("Coding");
 //		Group g2 = new Group("WaterPolo");
 //		Group g3 = new Group("Basketball");
@@ -106,7 +105,6 @@ public class Driver {
 //		Group g6 = new Group("GrapeJuiceConnoiseurs");
 //		Group g7 = new Group("SkyWatching");
 //		Group g8 = new Group("ProudToBeWomen");
->>>>>>> 12eca82716b273a0401971991fd5e8dcf100aafa
 		
 //		gd.createGroup(g1);
 //		gd.createGroup(g2);
@@ -164,7 +162,6 @@ public class Driver {
 //		pd.createPost(p4);
 
 		// public Comment(String content, Post post, User user
-<<<<<<< HEAD
 		Comment c1 = new Comment("That's right. Papa don't preach.", p4, u2);
 		Comment c2 = new Comment("I never made it to the school choir because the music teacher didn't like my voice. I was pretty sad. But he was probably right; I did have a voice a bit like a goat, but my dad told me to never give up and to keep going, and it's paid off.\r\n", p4, u6);
 		Comment c3 = new Comment("I just want to be the only girl in the world.", p4, u8);
@@ -197,6 +194,13 @@ public class Driver {
 //		Comment c1 = new Comment("That's right. Papa don't preach.", p4, u2);
 //		Comment c2 = new Comment("I never made it to the school choir because the music teacher didn't like my voice. I was pretty sad. But he was probably right; I did have a voice a bit like a goat, but my dad told me to never give up and to keep going, and it's paid off.\r\n", p4, u6);
 //		Comment c3 = new Comment("I just want to be the only girl in the world.", p4, u8);
+
+		
+//		Group group = gd.getGroupByName("TestGroup");
+//		User user = new User("twt-512342", "testTwoUser");
+//		group.addUser(user);
+//		gd.updateGroup(group);
+//		System.out.println("test group " + gd.getGroupByName("TestGroup"));
 
 		/*
 		Group group = gd.getGroupByName("TestGroup");
