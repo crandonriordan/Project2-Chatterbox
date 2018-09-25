@@ -72,9 +72,15 @@ public class PostController {
 //	END OF NEW NAMING CONVENTION
 	
 	
-	@RequestMapping(value="/api/posts/{name}", method={RequestMethod.HEAD, RequestMethod.OPTIONS, 
+	@RequestMapping(value="/api/groups/{name}/posts/{id}", method={RequestMethod.HEAD, RequestMethod.OPTIONS, 
 			RequestMethod.PATCH, RequestMethod.TRACE})
 	public String notSupported() {
+		return "not supported";
+	}
+	
+	@RequestMapping(value="/api/posts/{name}", method={RequestMethod.HEAD, RequestMethod.OPTIONS, 
+			RequestMethod.PATCH, RequestMethod.TRACE})
+	public String notSupportedOld() {
 		return "not supported";
 	}
 	
