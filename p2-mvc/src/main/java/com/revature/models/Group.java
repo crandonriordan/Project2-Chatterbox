@@ -32,7 +32,7 @@ public class Group {
 	@JsonProperty
 	private int id;
 	
-	@Column(name="GROUP_NAME", unique = true)
+	@Column(name="GROUP_NAME", unique = true, nullable=false)
 	@JsonProperty
 	private String name;
 	
