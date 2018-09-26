@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="6" failures="1" name="com.revature.daotest.GroupDaoTest" time="2.909" errors="2" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\bin"/>
+    <property name="java.vm.version" value="25.181-b13"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:/Users/Crandon/Documents/workspace-sts-3.9.5.RELEASE/jenkins/p2-mvc"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\Crandon\Documents\workspace-sts-3.9.5.RELEASE\jenkins\p2-mvc"/>
+    <property name="java.runtime.version" value="1.8.0_181-b13"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_181\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\Crandon\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:/Program Files/apache-maven-3.5.4/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\Crandon\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Crandon\bin;C:\oraclexe\app\oracle\product\11.2.0\server\bin;D:\app\Crandon\product\12.2.0\dbhome_2\bin;D:\app\Crandon\product\12.2.0\dbhome_1\bin;D:\app\Crandon\product\12.2.0\dbhome_21\bin;D:\app\Crandon\virtual\product\12.2.0\dbhome_1\bin;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jre1.8.0_181\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Git\cmd;D:\;C:\Program Files\dotnet;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files (x86)\dotnet;C:\Program Files\Microsoft VS Code\bin;C:\Users\Crandon\Downloads\apache-maven-3.5.4-src\apache-maven-3.5.4\apache-maven\src\bin;C:\Users\Crandon\Downloads\apache-maven-3.5.4-src\apache-maven-3.5.4;C:\Program Files\apache-maven-3.5.4\bin;C:\ProgramData\chocolatey\bin;C:\Ruby24-x64\bin;C:\Users\Crandon\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Microsoft VS Code\bin;C:\Users\Crandon\AppData\Roaming\npm;C:\Users\Crandon\AppData\Local\hyper\app-2.0.0\resources\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;."/>
+    <property name="maven.conf" value="C:/Program Files/apache-maven-3.5.4/conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="C:/Program Files/apache-maven-3.5.4/lib/jansi-native"/>
+    <property name="user.home" value="C:\Users\Crandon"/>
+    <property name="user.timezone" value="America/New_York"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="Crandon"/>
+    <property name="java.class.path" value="C:/Program Files/apache-maven-3.5.4/boot/plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_181\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean package"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_181"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_181\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Program Files\apache-maven-3.5.4"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="com.revature.daotest.GroupDaoTest" name="getGroupById" time="0.006">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.revature.daotest.GroupDaoTest.getGroupById(GroupDaoTest.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+    <system-out>- select group0_.id as id1_1_0_, group0_.GROUP_NAME as GROUP_NAME2_1_0_, users1_.name as name1_1_1_, user2_.id as id2_2_1_, user2_.id as id1_4_2_, user2_.nickname as nickname2_4_2_, user2_.role as role3_4_2_ from GROUPS group0_ left outer join GROUPS_USERS users1_ on group0_.id=users1_.name left outer join USERS user2_ on users1_.id=user2_.id where group0_.id=?
+Hibernate: select group0_.id as id1_1_0_, group0_.GROUP_NAME as GROUP_NAME2_1_0_, users1_.name as name1_1_1_, user2_.id as id2_2_1_, user2_.id as id1_4_2_, user2_.nickname as nickname2_4_2_, user2_.role as role3_4_2_ from GROUPS group0_ left outer join GROUPS_USERS users1_ on group0_.id=users1_.name left outer join USERS user2_ on users1_.id=user2_.id where group0_.id=?
+- Obtaining JDBC connection
+- Obtained JDBC connection
+- No collections were found in result set for role: com.revature.models.Group.users
+- Done entity load : com.revature.models.Group#4
+- Releasing JDBC connection
+- Released JDBC connection
+</system-out>
+  </testcase>
+  <testcase classname="com.revature.daotest.GroupDaoTest" name="createGroup" time="0.985"/>
+  <testcase classname="com.revature.daotest.GroupDaoTest" name="getGroupByName" time="0.095">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.revature.daotest.GroupDaoTest.getGroupByName(GroupDaoTest.java:36)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+    <system-out>- select group0_.id as id1_1_, group0_.GROUP_NAME as GROUP_NAME2_1_ from GROUPS group0_ where group0_.GROUP_NAME=?
+Hibernate: select group0_.id as id1_1_, group0_.GROUP_NAME as GROUP_NAME2_1_ from GROUPS group0_ where group0_.GROUP_NAME=?
+- Obtaining JDBC connection
+- Obtained JDBC connection
+</system-out>
+  </testcase>
+  <testcase classname="com.revature.daotest.GroupDaoTest" name="getGroupByIdThatDoesNotExist" time="1.148"/>
+  <testcase classname="com.revature.daotest.GroupDaoTest" name="getGroups" time="0.585">
+    <failure message="expected:&lt;8&gt; but was:&lt;5&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;8&gt; but was:&lt;5&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:645)
+	at org.junit.Assert.assertEquals(Assert.java:631)
+	at com.revature.daotest.GroupDaoTest.getGroups(GroupDaoTest.java:18)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>- parse() - HQL: from com.revature.models.Group
+- weakKeywords() : new LT(1) token - [&quot;Group&quot;,&lt;109&gt; previously: &lt;24&gt;,line=1,col=26,possibleID=true]
+- --- HQL AST ---
+ \-[QUERY] Node: &apos;query&apos;
+    \-[SELECT_FROM] Node: &apos;SELECT_FROM&apos;
+       \-[FROM] Node: &apos;from&apos;
+          \-[RANGE] Node: &apos;RANGE&apos;
+             \-[DOT] Node: &apos;.&apos;
+                +-[DOT] Node: &apos;.&apos;
+                |  +-[DOT] Node: &apos;.&apos;
+                |  |  +-[IDENT] Node: &apos;com&apos;
+                |  |  \-[IDENT] Node: &apos;revature&apos;
+                |  \-[IDENT] Node: &apos;models&apos;
+                \-[IDENT] Node: &apos;Group&apos;
+
+- throwQueryException() : no errors
+- select &lt;&lt; begin [level=1, statement=select]
+- FromClause{level=1} : com.revature.models.Group (&lt;no alias&gt;) -&gt; group0_
+- select : finishing up [level=1, statement=select]
+- processQuery() :  ( SELECT ( FromClause{level=1} GROUPS group0_ ) )
+- Derived SELECT clause created.
+- Using FROM fragment [GROUPS group0_]
+- select &gt;&gt; end [level=1, statement=select]
+- --- SQL AST ---
+ \-[SELECT] QueryNode: &apos;SELECT&apos;  querySpaces (GROUPS)
+    +-[SELECT_CLAUSE] SelectClause: &apos;{derived select clause}&apos;
+    |  +-[SELECT_EXPR] SelectExpressionImpl: &apos;group0_.id as id1_1_&apos; {FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=GROUPS,tableAlias=group0_,origin=null,columns={,className=com.revature.models.Group}}}
+    |  \-[SQL_TOKEN] SqlFragment: &apos;group0_.GROUP_NAME as GROUP_NAME2_1_&apos;
+    \-[FROM] FromClause: &apos;from&apos; FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[], fromElementByTableAlias=[group0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+       \-[FROM_FRAGMENT] FromElement: &apos;GROUPS group0_&apos; FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=GROUPS,tableAlias=group0_,origin=null,columns={,className=com.revature.models.Group}}
+
+- throwQueryException() : no errors
+- HQL: from com.revature.models.Group
+- SQL: select group0_.id as id1_1_, group0_.GROUP_NAME as GROUP_NAME2_1_ from GROUPS group0_
+- throwQueryException() : no errors
+- select group0_.id as id1_1_, group0_.GROUP_NAME as GROUP_NAME2_1_ from GROUPS group0_
+Hibernate: select group0_.id as id1_1_, group0_.GROUP_NAME as GROUP_NAME2_1_ from GROUPS group0_
+- Obtaining JDBC connection
+- Obtained JDBC connection
+- Result set row: 0
+- Result row: EntityKey[com.revature.models.Group#1]
+- Result set row: 1
+- Result row: EntityKey[com.revature.models.Group#114]
+- Result set row: 2
+- Result row: EntityKey[com.revature.models.Group#115]
+- Result set row: 3
+- Result row: EntityKey[com.revature.models.Group#112]
+- Result set row: 4
+- Result row: EntityKey[com.revature.models.Group#113]
+- Resolving associations for [com.revature.models.Group#1]
+- Done materializing entity [com.revature.models.Group#1]
+- Resolving associations for [com.revature.models.Group#114]
+- Done materializing entity [com.revature.models.Group#114]
+- Resolving associations for [com.revature.models.Group#115]
+- Done materializing entity [com.revature.models.Group#115]
+- Resolving associations for [com.revature.models.Group#112]
+- Done materializing entity [com.revature.models.Group#112]
+- Resolving associations for [com.revature.models.Group#113]
+- Done materializing entity [com.revature.models.Group#113]
+- Loading collection: [com.revature.models.Group.users#113]
+- select users0_.name as name1_1_0_, users0_.id as id2_2_0_, user1_.id as id1_4_1_, user1_.nickname as nickname2_4_1_, user1_.role as role3_4_1_ from GROUPS_USERS users0_ inner join USERS user1_ on users0_.id=user1_.id where users0_.name=?
+Hibernate: select users0_.name as name1_1_0_, users0_.id as id2_2_0_, user1_.id as id1_4_1_, user1_.nickname as nickname2_4_1_, user1_.role as role3_4_1_ from GROUPS_USERS users0_ inner join USERS user1_ on users0_.id=user1_.id where users0_.name=?
+- Preparing collection intializer : [com.revature.models.Group.users#113]
+- 1 collections were found in result set for role: com.revature.models.Group.users
+- Collection fully initialized: [com.revature.models.Group.users#113]
+- 1 collections initialized for role: com.revature.models.Group.users
+- Done loading collection
+- Loading collection: [com.revature.models.Group.users#112]
+- select users0_.name as name1_1_0_, users0_.id as id2_2_0_, user1_.id as id1_4_1_, user1_.nickname as nickname2_4_1_, user1_.role as role3_4_1_ from GROUPS_USERS users0_ inner join USERS user1_ on users0_.id=user1_.id where users0_.name=?
+Hibernate: select users0_.name as name1_1_0_, users0_.id as id2_2_0_, user1_.id as id1_4_1_, user1_.nickname as nickname2_4_1_, user1_.role as role3_4_1_ from GROUPS_USERS users0_ inner join USERS user1_ on users0_.id=user1_.id where users0_.name=?
+- Preparing collection intializer : [com.revature.models.Group.users#112]
+- 1 collections were found in result set for role: com.revature.models.Group.users
+- Collection fully initialized: [com.revature.models.Group.users#112]
+- 1 collections initialized for role: com.revature.models.Group.users
+- Done loading collection
+- Loading collection: [com.revature.models.Group.users#115]
+- select users0_.name as name1_1_0_, users0_.id as id2_2_0_, user1_.id as id1_4_1_, user1_.nickname as nickname2_4_1_, user1_.role as role3_4_1_ from GROUPS_USERS users0_ inner join USERS user1_ on users0_.id=user1_.id where users0_.name=?
+Hibernate: select users0_.name as name1_1_0_, users0_.id as id2_2_0_, user1_.id as id1_4_1_, user1_.nickname as nickname2_4_1_, user1_.role as role3_4_1_ from GROUPS_USERS users0_ inner join USERS user1_ on users0_.id=user1_.id where users0_.name=?
+- Preparing collection intializer : [com.revature.models.Group.users#115]
+- 1 collections were found in result set for role: com.revature.models.Group.users
+- Collection fully initialized: [com.revature.models.Group.users#115]
+- 1 collections initialized for role: com.revature.models.Group.users
+- Done loading collection
+- Loading collection: [com.revature.models.Group.users#114]
+- select users0_.name as name1_1_0_, users0_.id as id2_2_0_, user1_.id as id1_4_1_, user1_.nickname as nickname2_4_1_, user1_.role as role3_4_1_ from GROUPS_USERS users0_ inner join USERS user1_ on users0_.id=user1_.id where users0_.name=?
+Hibernate: select users0_.name as name1_1_0_, users0_.id as id2_2_0_, user1_.id as id1_4_1_, user1_.nickname as nickname2_4_1_, user1_.role as role3_4_1_ from GROUPS_USERS users0_ inner join USERS user1_ on users0_.id=user1_.id where users0_.name=?
+- Preparing collection intializer : [com.revature.models.Group.users#114]
+- 1 collections were found in result set for role: com.revature.models.Group.users
+- Collection fully initialized: [com.revature.models.Group.users#114]
+- 1 collections initialized for role: com.revature.models.Group.users
+- Done loading collection
+- Loading collection: [com.revature.models.Group.users#1]
+- select users0_.name as name1_1_0_, users0_.id as id2_2_0_, user1_.id as id1_4_1_, user1_.nickname as nickname2_4_1_, user1_.role as role3_4_1_ from GROUPS_USERS users0_ inner join USERS user1_ on users0_.id=user1_.id where users0_.name=?
+Hibernate: select users0_.name as name1_1_0_, users0_.id as id2_2_0_, user1_.id as id1_4_1_, user1_.nickname as nickname2_4_1_, user1_.role as role3_4_1_ from GROUPS_USERS users0_ inner join USERS user1_ on users0_.id=user1_.id where users0_.name=?
+- Preparing collection intializer : [com.revature.models.Group.users#1]
+- 1 collections were found in result set for role: com.revature.models.Group.users
+- Collection fully initialized: [com.revature.models.Group.users#1]
+- 1 collections initialized for role: com.revature.models.Group.users
+- Done loading collection
+- Releasing JDBC connection
+- Released JDBC connection
+</system-out>
+  </testcase>
+  <testcase classname="com.revature.daotest.GroupDaoTest" name="getGroupByNameThatDoesNotExist" time="0.09"/>
+</testsuite>
