@@ -11,14 +11,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.revature.dao.UserDaoImpl;
 import com.revature.models.User;
 import com.revature.services.UserService;
 
 @CrossOrigin
 @RestController
 public class UserController {
+	
 	@Autowired
 	UserService userService;
+
+	UserDaoImpl udi = new UserDaoImpl();
 	
 	@GetMapping(value="/api/users")
 	public List<User> getAllUsers() {
@@ -30,9 +34,15 @@ public class UserController {
 		return userService.findUserById(id);
 	}
 	
-	@PostMapping(value="/api/users/{id}", consumes = "application/json", produces = "application/json")
+	@PostMapping(value="/api/users", consumes = "application/json", produces = "application/json")
 	public User addUser(@RequestBody User user) {
-		return userService.createUser(user);
+		User userById = udi.getUserById(user.getId());
+		if(userById == null) {
+			return userService.createUser(user);
+		} else {
+			return null;
+		}
+		
 	}
 	
 	@DeleteMapping(value="/api/users/{id}", produces="application/json")
