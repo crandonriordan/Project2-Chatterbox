@@ -3,3 +3,8 @@
 .sonarlint
 .setting
 pom.properties
+catilina.properties
+.project
+/localhost-config/*
+*.prefs
+tomcat-users.xml
