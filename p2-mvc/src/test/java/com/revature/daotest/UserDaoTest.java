@@ -10,7 +10,7 @@ public class UserDaoTest {
 	static final Logger logger = Logger.getLogger(CommentDaoTest.class);
 	
 	UserDao udi = new UserDaoImpl();
-	
+
 	@Test
 	public void createUser() {
 		// udi.createUser(user);
