@@ -73,6 +73,11 @@ public class PostController {
 //	
 //	END OF NEW NAMING CONVENTION
 	
+	@RequestMapping(value="/api/groups/{name}/posts", method={RequestMethod.HEAD, RequestMethod.OPTIONS, 
+			RequestMethod.PATCH, RequestMethod.TRACE})
+	public ResponseEntity notSupportedOnCorrectPathing() {
+		return new ResponseEntity(HttpStatus.OK);
+	
 	
 	@RequestMapping(value="/api/groups/{name}/posts/{id}", method={RequestMethod.HEAD, RequestMethod.OPTIONS, 
 			RequestMethod.PATCH, RequestMethod.TRACE})
