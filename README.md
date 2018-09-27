@@ -14,7 +14,7 @@ of the app and is
 typically organized around a particular subject.
 
 # Database Structure
-![alt text](https://ibb.co/nrMFNU "Logo Title Text 1")
+[Imgur](https://i.imgur.com/IYxxyDu.png)
 
 # Description of our RESTful Routes
 
