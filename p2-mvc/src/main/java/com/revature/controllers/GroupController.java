@@ -35,6 +35,4 @@ public class GroupController {
 		return groupService.createGroup(group);
 	}
 	
-// TODO rest of the RESTful routes :P
-	
 }
