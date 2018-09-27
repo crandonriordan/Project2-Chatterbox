@@ -30,11 +30,9 @@ public class GroupController {
 		return groupService.findGroupByName(name);
 	}
 	
-	@PostMapping("/api/groups/{name}")
+	@PostMapping("/api/groups")
 	public Group createGroup(@RequestBody Group group) {
 		return groupService.createGroup(group);
 	}
-	
-// TODO rest of the RESTful routes :P
 	
 }

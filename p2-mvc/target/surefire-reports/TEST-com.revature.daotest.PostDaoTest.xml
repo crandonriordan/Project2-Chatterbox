@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="8" failures="2" name="com.revature.daotest.PostDaoTest" time="3.017" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\bin"/>
+    <property name="java.vm.version" value="25.181-b13"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:/Users/Crandon/Documents/workspace-sts-3.9.5.RELEASE/jenkins/p2-mvc"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\Crandon\Documents\workspace-sts-3.9.5.RELEASE\jenkins\p2-mvc"/>
+    <property name="java.runtime.version" value="1.8.0_181-b13"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_181\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\Crandon\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:/Program Files/apache-maven-3.5.4/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\Crandon\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Crandon\bin;C:\oraclexe\app\oracle\product\11.2.0\server\bin;D:\app\Crandon\product\12.2.0\dbhome_2\bin;D:\app\Crandon\product\12.2.0\dbhome_1\bin;D:\app\Crandon\product\12.2.0\dbhome_21\bin;D:\app\Crandon\virtual\product\12.2.0\dbhome_1\bin;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jre1.8.0_181\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Git\cmd;D:\;C:\Program Files\dotnet;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files (x86)\dotnet;C:\Program Files\Microsoft VS Code\bin;C:\Users\Crandon\Downloads\apache-maven-3.5.4-src\apache-maven-3.5.4\apache-maven\src\bin;C:\Users\Crandon\Downloads\apache-maven-3.5.4-src\apache-maven-3.5.4;C:\Program Files\apache-maven-3.5.4\bin;C:\ProgramData\chocolatey\bin;C:\Ruby24-x64\bin;C:\Users\Crandon\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Microsoft VS Code\bin;C:\Users\Crandon\AppData\Roaming\npm;C:\Users\Crandon\AppData\Local\hyper\app-2.0.0\resources\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;."/>
+    <property name="maven.conf" value="C:/Program Files/apache-maven-3.5.4/conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="C:/Program Files/apache-maven-3.5.4/lib/jansi-native"/>
+    <property name="user.home" value="C:\Users\Crandon"/>
+    <property name="user.timezone" value="America/New_York"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="Crandon"/>
+    <property name="java.class.path" value="C:/Program Files/apache-maven-3.5.4/boot/plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_181\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean package"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_181"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_181\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Program Files\apache-maven-3.5.4"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="com.revature.daotest.PostDaoTest" name="getPostsByGroupId" time="0"/>
+  <testcase classname="com.revature.daotest.PostDaoTest" name="getPostById" time="1.133">
+    <failure message="expected:&lt;[Title One]&gt; but was:&lt;[Go Browns!]&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;[Title One]&gt; but was:&lt;[Go Browns!]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.revature.daotest.PostDaoTest.getPostById(PostDaoTest.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>- select post0_.id as id1_3_0_, post0_.content as content2_3_0_, post0_.group_id as group_id5_3_0_, post0_.imageUrl as imageUrl3_3_0_, post0_.title as title4_3_0_, post0_.user_id as user_id6_3_0_, comments1_.post_id as post_id3_3_1_, comments1_.id as id1_0_1_, comments1_.id as id1_0_2_, comments1_.content as content2_0_2_, comments1_.post_id as post_id3_0_2_, comments1_.user_id as user_id4_0_2_, user2_.id as id1_4_3_, user2_.nickname as nickname2_4_3_, user2_.role as role3_4_3_, groups3_.id as id2_4_4_, group4_.id as name1_2_4_, group4_.id as id1_1_5_, group4_.GROUP_NAME as GROUP_NAME2_1_5_, group5_.id as id1_1_6_, group5_.GROUP_NAME as GROUP_NAME2_1_6_, user6_.id as id1_4_7_, user6_.nickname as nickname2_4_7_, user6_.role as role3_4_7_, votes7_.postId as postId1_3_8_, votes7_.postId as postId1_5_8_, votes7_.userId as userId2_5_8_, votes7_.postId as postId1_5_9_, votes7_.userId as userId2_5_9_ from Post post0_ left outer join COMMENTS comments1_ on post0_.id=comments1_.post_id left outer join USERS user2_ on comments1_.user_id=user2_.id left outer join GROUPS_USERS groups3_ on user2_.id=groups3_.id left outer join GROUPS group4_ on groups3_.name=group4_.id left outer join GROUPS group5_ on post0_.group_id=group5_.id left outer join USERS user6_ on post0_.user_id=user6_.id left outer join Vote votes7_ on post0_.id=votes7_.postId where post0_.id=?
+Hibernate: select post0_.id as id1_3_0_, post0_.content as content2_3_0_, post0_.group_id as group_id5_3_0_, post0_.imageUrl as imageUrl3_3_0_, post0_.title as title4_3_0_, post0_.user_id as user_id6_3_0_, comments1_.post_id as post_id3_3_1_, comments1_.id as id1_0_1_, comments1_.id as id1_0_2_, comments1_.content as content2_0_2_, comments1_.post_id as post_id3_0_2_, comments1_.user_id as user_id4_0_2_, user2_.id as id1_4_3_, user2_.nickname as nickname2_4_3_, user2_.role as role3_4_3_, groups3_.id as id2_4_4_, group4_.id as name1_2_4_, group4_.id as id1_1_5_, group4_.GROUP_NAME as GROUP_NAME2_1_5_, group5_.id as id1_1_6_, group5_.GROUP_NAME as GROUP_NAME2_1_6_, user6_.id as id1_4_7_, user6_.nickname as nickname2_4_7_, user6_.role as role3_4_7_, votes7_.postId as postId1_3_8_, votes7_.postId as postId1_5_8_, votes7_.userId as userId2_5_8_, votes7_.postId as postId1_5_9_, votes7_.userId as userId2_5_9_ from Post post0_ left outer join COMMENTS comments1_ on post0_.id=comments1_.post_id left outer join USERS user2_ on comments1_.user_id=user2_.id left outer join GROUPS_USERS groups3_ on user2_.id=groups3_.id left outer join GROUPS group4_ on groups3_.name=group4_.id left outer join GROUPS group5_ on post0_.group_id=group5_.id left outer join USERS user6_ on post0_.user_id=user6_.id left outer join Vote votes7_ on post0_.id=votes7_.postId where post0_.id=?
+- Obtaining JDBC connection
+- Obtained JDBC connection
+- Starting ResultSet row #0
+- On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+- Result set contains (possibly empty) collection: [com.revature.models.User.groups#ggl-123]
+- Found row of collection: [com.revature.models.Post.comments#1]
+- Result set contains (possibly empty) collection: [com.revature.models.Post.votes#1]
+- Resolving associations for [com.revature.models.Post#1]
+- Done materializing entity [com.revature.models.Post#1]
+- Resolving associations for [com.revature.models.Comment#22]
+- Done materializing entity [com.revature.models.Comment#22]
+- Resolving associations for [com.revature.models.User#ggl-123]
+- Done materializing entity [com.revature.models.User#ggl-123]
+- Resolving associations for [com.revature.models.Group#1]
+- Done materializing entity [com.revature.models.Group#1]
+- 1 collections were found in result set for role: com.revature.models.User.groups
+- Collection fully initialized: [com.revature.models.User.groups#ggl-123]
+- 1 collections initialized for role: com.revature.models.User.groups
+- 1 collections were found in result set for role: com.revature.models.Post.comments
+- Collection fully initialized: [com.revature.models.Post.comments#1]
+- 1 collections initialized for role: com.revature.models.Post.comments
+- 1 collections were found in result set for role: com.revature.models.Post.votes
+- Collection fully initialized: [com.revature.models.Post.votes#1]
+- 1 collections initialized for role: com.revature.models.Post.votes
+- Loading collection: [com.revature.models.Group.users#1]
+- select users0_.name as name1_1_0_, users0_.id as id2_2_0_, user1_.id as id1_4_1_, user1_.nickname as nickname2_4_1_, user1_.role as role3_4_1_ from GROUPS_USERS users0_ inner join USERS user1_ on users0_.id=user1_.id where users0_.name=?
+Hibernate: select users0_.name as name1_1_0_, users0_.id as id2_2_0_, user1_.id as id1_4_1_, user1_.nickname as nickname2_4_1_, user1_.role as role3_4_1_ from GROUPS_USERS users0_ inner join USERS user1_ on users0_.id=user1_.id where users0_.name=?
+- Preparing collection intializer : [com.revature.models.Group.users#1]
+- 1 collections were found in result set for role: com.revature.models.Group.users
+- Collection fully initialized: [com.revature.models.Group.users#1]
+- 1 collections initialized for role: com.revature.models.Group.users
+- Done loading collection
+- Done entity load : com.revature.models.Post#1
+- Releasing JDBC connection
+- Released JDBC connection
+</system-out>
+  </testcase>
+  <testcase classname="com.revature.daotest.PostDaoTest" name="getPostsByPage" time="0"/>
+  <testcase classname="com.revature.daotest.PostDaoTest" name="getPostsByUserId" time="0"/>
+  <testcase classname="com.revature.daotest.PostDaoTest" name="getPostsByGroupName" time="0.197"/>
+  <testcase classname="com.revature.daotest.PostDaoTest" name="createPost" time="0"/>
+  <testcase classname="com.revature.daotest.PostDaoTest" name="deletePost" time="0"/>
+  <testcase classname="com.revature.daotest.PostDaoTest" name="getPosts" time="1.687">
+    <failure message="expected:&lt;3&gt; but was:&lt;6&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;3&gt; but was:&lt;6&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:645)
+	at org.junit.Assert.assertEquals(Assert.java:631)
+	at com.revature.daotest.PostDaoTest.getPosts(PostDaoTest.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>- parse() - HQL: from com.revature.models.Post
+- --- HQL AST ---
+ \-[QUERY] Node: &apos;query&apos;
+    \-[SELECT_FROM] Node: &apos;SELECT_FROM&apos;
+       \-[FROM] Node: &apos;from&apos;
+          \-[RANGE] Node: &apos;RANGE&apos;
+             \-[DOT] Node: &apos;.&apos;
+                +-[DOT] Node: &apos;.&apos;
+                |  +-[DOT] Node: &apos;.&apos;
+                |  |  +-[IDENT] Node: &apos;com&apos;
+                |  |  \-[IDENT] Node: &apos;revature&apos;
+                |  \-[IDENT] Node: &apos;models&apos;
+                \-[IDENT] Node: &apos;Post&apos;
+
+- throwQueryException() : no errors
+- select &lt;&lt; begin [level=1, statement=select]
+- FromClause{level=1} : com.revature.models.Post (&lt;no alias&gt;) -&gt; post0_
+- select : finishing up [level=1, statement=select]
+- processQuery() :  ( SELECT ( FromClause{level=1} Post post0_ ) )
+- Derived SELECT clause created.
+- Using FROM fragment [Post post0_]
+- select &gt;&gt; end [level=1, statement=select]
+- --- SQL AST ---
+ \-[SELECT] QueryNode: &apos;SELECT&apos;  querySpaces (Post)
+    +-[SELECT_CLAUSE] SelectClause: &apos;{derived select clause}&apos;
+    |  +-[SELECT_EXPR] SelectExpressionImpl: &apos;post0_.id as id1_3_&apos; {FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=Post,tableAlias=post0_,origin=null,columns={,className=com.revature.models.Post}}}
+    |  \-[SQL_TOKEN] SqlFragment: &apos;post0_.content as content2_3_, post0_.group_id as group_id5_3_, post0_.imageUrl as imageUrl3_3_, post0_.title as title4_3_, post0_.user_id as user_id6_3_&apos;
+    \-[FROM] FromClause: &apos;from&apos; FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[], fromElementByTableAlias=[post0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+       \-[FROM_FRAGMENT] FromElement: &apos;Post post0_&apos; FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=Post,tableAlias=post0_,origin=null,columns={,className=com.revature.models.Post}}
+
+- throwQueryException() : no errors
+- HQL: from com.revature.models.Post
+- SQL: select post0_.id as id1_3_, post0_.content as content2_3_, post0_.group_id as group_id5_3_, post0_.imageUrl as imageUrl3_3_, post0_.title as title4_3_, post0_.user_id as user_id6_3_ from Post post0_
+- throwQueryException() : no errors
+- select post0_.id as id1_3_, post0_.content as content2_3_, post0_.group_id as group_id5_3_, post0_.imageUrl as imageUrl3_3_, post0_.title as title4_3_, post0_.user_id as user_id6_3_ from Post post0_
+Hibernate: select post0_.id as id1_3_, post0_.content as content2_3_, post0_.group_id as group_id5_3_, post0_.imageUrl as imageUrl3_3_, post0_.title as title4_3_, post0_.user_id as user_id6_3_ from Post post0_
+- Obtaining JDBC connection
+- Obtained JDBC connection
+- Result set row: 0
+- Result row: EntityKey[com.revature.models.Post#73]
+- Result set row: 1
+- Result row: EntityKey[com.revature.models.Post#65]
+- Result set row: 2
+- Result row: EntityKey[com.revature.models.Post#81]
+- Result set row: 3
+- Result row: EntityKey[com.revature.models.Post#1]
+- Result set row: 4
+- Result row: EntityKey[com.revature.models.Post#2]
+- Result set row: 5
+- Result row: EntityKey[com.revature.models.Post#3]
+- Resolving associations for [com.revature.models.Post#73]
+- select group0_.id as id1_1_0_, group0_.GROUP_NAME as GROUP_NAME2_1_0_, users1_.name as name1_1_1_, user2_.id as id2_2_1_, user2_.id as id1_4_2_, user2_.nickname as nickname2_4_2_, user2_.role as role3_4_2_ from GROUPS group0_ left outer join GROUPS_USERS users1_ on group0_.id=users1_.name left outer join USERS user2_ on users1_.id=user2_.id where group0_.id=?
+Hibernate: select group0_.id as id1_1_0_, group0_.GROUP_NAME as GROUP_NAME2_1_0_, users1_.name as name1_1_1_, user2_.id as id2_2_1_, user2_.id as id1_4_2_, user2_.nickname as nickname2_4_2_, user2_.role as role3_4_2_ from GROUPS group0_ left outer join GROUPS_USERS users1_ on group0_.id=users1_.name left outer join USERS user2_ on users1_.id=user2_.id where group0_.id=?
+- Starting ResultSet row #0
+- On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+- Result set contains (possibly empty) collection: [com.revature.models.Group.users#1]
+- Resolving associations for [com.revature.models.Group#1]
+- Done materializing entity [com.revature.models.Group#1]
+- 1 collections were found in result set for role: com.revature.models.Group.users
+- Collection fully initialized: [com.revature.models.Group.users#1]
+- 1 collections initialized for role: com.revature.models.Group.users
+- Done entity load : com.revature.models.Group#1
+- select user0_.id as id1_4_0_, user0_.nickname as nickname2_4_0_, user0_.role as role3_4_0_, groups1_.id as id2_4_1_, group2_.id as name1_2_1_, group2_.id as id1_1_2_, group2_.GROUP_NAME as GROUP_NAME2_1_2_ from USERS user0_ left outer join GROUPS_USERS groups1_ on user0_.id=groups1_.id left outer join GROUPS group2_ on groups1_.name=group2_.id where user0_.id=?
+Hibernate: select user0_.id as id1_4_0_, user0_.nickname as nickname2_4_0_, user0_.role as role3_4_0_, groups1_.id as id2_4_1_, group2_.id as name1_2_1_, group2_.id as id1_1_2_, group2_.GROUP_NAME as GROUP_NAME2_1_2_ from USERS user0_ left outer join GROUPS_USERS groups1_ on user0_.id=groups1_.id left outer join GROUPS group2_ on groups1_.name=group2_.id where user0_.id=?
+- Starting ResultSet row #0
+- On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+- Result set contains (possibly empty) collection: [com.revature.models.User.groups#ggl-124]
+- Resolving associations for [com.revature.models.User#ggl-124]
+- Done materializing entity [com.revature.models.User#ggl-124]
+- 1 collections were found in result set for role: com.revature.models.User.groups
+- Collection fully initialized: [com.revature.models.User.groups#ggl-124]
+- 1 collections initialized for role: com.revature.models.User.groups
+- Done entity load : com.revature.models.User#ggl-124
+- Done materializing entity [com.revature.models.Post#73]
+- Resolving associations for [com.revature.models.Post#65]
+- Done materializing entity [com.revature.models.Post#65]
+- Resolving associations for [com.revature.models.Post#81]
+- Done materializing entity [com.revature.models.Post#81]
+- Resolving associations for [com.revature.models.Post#1]
+- select user0_.id as id1_4_0_, user0_.nickname as nickname2_4_0_, user0_.role as role3_4_0_, groups1_.id as id2_4_1_, group2_.id as name1_2_1_, group2_.id as id1_1_2_, group2_.GROUP_NAME as GROUP_NAME2_1_2_ from USERS user0_ left outer join GROUPS_USERS groups1_ on user0_.id=groups1_.id left outer join GROUPS group2_ on groups1_.name=group2_.id where user0_.id=?
+Hibernate: select user0_.id as id1_4_0_, user0_.nickname as nickname2_4_0_, user0_.role as role3_4_0_, groups1_.id as id2_4_1_, group2_.id as name1_2_1_, group2_.id as id1_1_2_, group2_.GROUP_NAME as GROUP_NAME2_1_2_ from USERS user0_ left outer join GROUPS_USERS groups1_ on user0_.id=groups1_.id left outer join GROUPS group2_ on groups1_.name=group2_.id where user0_.id=?
+- Starting ResultSet row #0
+- On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+- Result set contains (possibly empty) collection: [com.revature.models.User.groups#ggl-123]
+- Resolving associations for [com.revature.models.User#ggl-123]
+- Done materializing entity [com.revature.models.User#ggl-123]
+- 1 collections were found in result set for role: com.revature.models.User.groups
+- Collection fully initialized: [com.revature.models.User.groups#ggl-123]
+- 1 collections initialized for role: com.revature.models.User.groups
+- Done entity load : com.revature.models.User#ggl-123
+- Done materializing entity [com.revature.models.Post#1]
+- Resolving associations for [com.revature.models.Post#2]
+- Done materializing entity [com.revature.models.Post#2]
+- Resolving associations for [com.revature.models.Post#3]
+- Done materializing entity [com.revature.models.Post#3]
+- Loading collection: [com.revature.models.Post.votes#3]
+- select votes0_.postId as postId1_3_0_, votes0_.postId as postId1_5_0_, votes0_.userId as userId2_5_0_, votes0_.postId as postId1_5_1_, votes0_.userId as userId2_5_1_ from Vote votes0_ where votes0_.postId=?
+Hibernate: select votes0_.postId as postId1_3_0_, votes0_.postId as postId1_5_0_, votes0_.userId as userId2_5_0_, votes0_.postId as postId1_5_1_, votes0_.userId as userId2_5_1_ from Vote votes0_ where votes0_.postId=?
+- Preparing collection intializer : [com.revature.models.Post.votes#3]
+- Starting ResultSet row #0
+- Found row of collection: [com.revature.models.Post.votes#3]
+- Resolving associations for [com.revature.models.Vote#component[postId,userId]{postId=3, userId=ggl-123}]
+- Done materializing entity [com.revature.models.Vote#component[postId,userId]{postId=3, userId=ggl-123}]
+- 1 collections were found in result set for role: com.revature.models.Post.votes
+- Collection fully initialized: [com.revature.models.Post.votes#3]
+- 1 collections initialized for role: com.revature.models.Post.votes
+- Done loading collection
+- Loading collection: [com.revature.models.Post.comments#3]
+- select comments0_.post_id as post_id3_3_0_, comments0_.id as id1_0_0_, comments0_.id as id1_0_1_, comments0_.content as content2_0_1_, comments0_.post_id as post_id3_0_1_, comments0_.user_id as user_id4_0_1_, user1_.id as id1_4_2_, user1_.nickname as nickname2_4_2_, user1_.role as role3_4_2_ from COMMENTS comments0_ left outer join USERS user1_ on comments0_.user_id=user1_.id where comments0_.post_id=?
+Hibernate: select comments0_.post_id as post_id3_3_0_, comments0_.id as id1_0_0_, comments0_.id as id1_0_1_, comments0_.content as content2_0_1_, comments0_.post_id as post_id3_0_1_, comments0_.user_id as user_id4_0_1_, user1_.id as id1_4_2_, user1_.nickname as nickname2_4_2_, user1_.role as role3_4_2_ from COMMENTS comments0_ left outer join USERS user1_ on comments0_.user_id=user1_.id where comments0_.post_id=?
+- Preparing collection intializer : [com.revature.models.Post.comments#3]
+- 1 collections were found in result set for role: com.revature.models.Post.comments
+- Collection fully initialized: [com.revature.models.Post.comments#3]
+- 1 collections initialized for role: com.revature.models.Post.comments
+- Done loading collection
+- Loading collection: [com.revature.models.Post.votes#2]
+- select votes0_.postId as postId1_3_0_, votes0_.postId as postId1_5_0_, votes0_.userId as userId2_5_0_, votes0_.postId as postId1_5_1_, votes0_.userId as userId2_5_1_ from Vote votes0_ where votes0_.postId=?
+Hibernate: select votes0_.postId as postId1_3_0_, votes0_.postId as postId1_5_0_, votes0_.userId as userId2_5_0_, votes0_.postId as postId1_5_1_, votes0_.userId as userId2_5_1_ from Vote votes0_ where votes0_.postId=?
+- Preparing collection intializer : [com.revature.models.Post.votes#2]
+- 1 collections were found in result set for role: com.revature.models.Post.votes
+- Collection fully initialized: [com.revature.models.Post.votes#2]
+- 1 collections initialized for role: com.revature.models.Post.votes
+- Done loading collection
+- Loading collection: [com.revature.models.Post.comments#2]
+- select comments0_.post_id as post_id3_3_0_, comments0_.id as id1_0_0_, comments0_.id as id1_0_1_, comments0_.content as content2_0_1_, comments0_.post_id as post_id3_0_1_, comments0_.user_id as user_id4_0_1_, user1_.id as id1_4_2_, user1_.nickname as nickname2_4_2_, user1_.role as role3_4_2_ from COMMENTS comments0_ left outer join USERS user1_ on comments0_.user_id=user1_.id where comments0_.post_id=?
+Hibernate: select comments0_.post_id as post_id3_3_0_, comments0_.id as id1_0_0_, comments0_.id as id1_0_1_, comments0_.content as content2_0_1_, comments0_.post_id as post_id3_0_1_, comments0_.user_id as user_id4_0_1_, user1_.id as id1_4_2_, user1_.nickname as nickname2_4_2_, user1_.role as role3_4_2_ from COMMENTS comments0_ left outer join USERS user1_ on comments0_.user_id=user1_.id where comments0_.post_id=?
+- Preparing collection intializer : [com.revature.models.Post.comments#2]
+- Starting ResultSet row #0
+- Found row of collection: [com.revature.models.Post.comments#2]
+- Resolving associations for [com.revature.models.Comment#4]
+- Done materializing entity [com.revature.models.Comment#4]
+- 1 collections were found in result set for role: com.revature.models.Post.comments
+- Collection fully initialized: [com.revature.models.Post.comments#2]
+- 1 collections initialized for role: com.revature.models.Post.comments
+- Done loading collection
+- Loading collection: [com.revature.models.Post.votes#1]
+- select votes0_.postId as postId1_3_0_, votes0_.postId as postId1_5_0_, votes0_.userId as userId2_5_0_, votes0_.postId as postId1_5_1_, votes0_.userId as userId2_5_1_ from Vote votes0_ where votes0_.postId=?
+Hibernate: select votes0_.postId as postId1_3_0_, votes0_.postId as postId1_5_0_, votes0_.userId as userId2_5_0_, votes0_.postId as postId1_5_1_, votes0_.userId as userId2_5_1_ from Vote votes0_ where votes0_.postId=?
+- Preparing collection intializer : [com.revature.models.Post.votes#1]
+- 1 collections were found in result set for role: com.revature.models.Post.votes
+- Collection fully initialized: [com.revature.models.Post.votes#1]
+- 1 collections initialized for role: com.revature.models.Post.votes
+- Done loading collection
+- Loading collection: [com.revature.models.Post.comments#1]
+- select comments0_.post_id as post_id3_3_0_, comments0_.id as id1_0_0_, comments0_.id as id1_0_1_, comments0_.content as content2_0_1_, comments0_.post_id as post_id3_0_1_, comments0_.user_id as user_id4_0_1_, user1_.id as id1_4_2_, user1_.nickname as nickname2_4_2_, user1_.role as role3_4_2_ from COMMENTS comments0_ left outer join USERS user1_ on comments0_.user_id=user1_.id where comments0_.post_id=?
+Hibernate: select comments0_.post_id as post_id3_3_0_, comments0_.id as id1_0_0_, comments0_.id as id1_0_1_, comments0_.content as content2_0_1_, comments0_.post_id as post_id3_0_1_, comments0_.user_id as user_id4_0_1_, user1_.id as id1_4_2_, user1_.nickname as nickname2_4_2_, user1_.role as role3_4_2_ from COMMENTS comments0_ left outer join USERS user1_ on comments0_.user_id=user1_.id where comments0_.post_id=?
+- Preparing collection intializer : [com.revature.models.Post.comments#1]
+- Starting ResultSet row #0
+- Found row of collection: [com.revature.models.Post.comments#1]
+- Resolving associations for [com.revature.models.Comment#22]
+- Done materializing entity [com.revature.models.Comment#22]
+- 1 collections were found in result set for role: com.revature.models.Post.comments
+- Collection fully initialized: [com.revature.models.Post.comments#1]
+- 1 collections initialized for role: com.revature.models.Post.comments
+- Done loading collection
+- Loading collection: [com.revature.models.Post.votes#81]
+- select votes0_.postId as postId1_3_0_, votes0_.postId as postId1_5_0_, votes0_.userId as userId2_5_0_, votes0_.postId as postId1_5_1_, votes0_.userId as userId2_5_1_ from Vote votes0_ where votes0_.postId=?
+Hibernate: select votes0_.postId as postId1_3_0_, votes0_.postId as postId1_5_0_, votes0_.userId as userId2_5_0_, votes0_.postId as postId1_5_1_, votes0_.userId as userId2_5_1_ from Vote votes0_ where votes0_.postId=?
+- Preparing collection intializer : [com.revature.models.Post.votes#81]
+- 1 collections were found in result set for role: com.revature.models.Post.votes
+- Collection fully initialized: [com.revature.models.Post.votes#81]
+- 1 collections initialized for role: com.revature.models.Post.votes
+- Done loading collection
+- Loading collection: [com.revature.models.Post.comments#81]
+- select comments0_.post_id as post_id3_3_0_, comments0_.id as id1_0_0_, comments0_.id as id1_0_1_, comments0_.content as content2_0_1_, comments0_.post_id as post_id3_0_1_, comments0_.user_id as user_id4_0_1_, user1_.id as id1_4_2_, user1_.nickname as nickname2_4_2_, user1_.role as role3_4_2_ from COMMENTS comments0_ left outer join USERS user1_ on comments0_.user_id=user1_.id where comments0_.post_id=?
+Hibernate: select comments0_.post_id as post_id3_3_0_, comments0_.id as id1_0_0_, comments0_.id as id1_0_1_, comments0_.content as content2_0_1_, comments0_.post_id as post_id3_0_1_, comments0_.user_id as user_id4_0_1_, user1_.id as id1_4_2_, user1_.nickname as nickname2_4_2_, user1_.role as role3_4_2_ from COMMENTS comments0_ left outer join USERS user1_ on comments0_.user_id=user1_.id where comments0_.post_id=?
+- Preparing collection intializer : [com.revature.models.Post.comments#81]
+- 1 collections were found in result set for role: com.revature.models.Post.comments
+- Collection fully initialized: [com.revature.models.Post.comments#81]
+- 1 collections initialized for role: com.revature.models.Post.comments
+- Done loading collection
+- Loading collection: [com.revature.models.Post.votes#65]
+- select votes0_.postId as postId1_3_0_, votes0_.postId as postId1_5_0_, votes0_.userId as userId2_5_0_, votes0_.postId as postId1_5_1_, votes0_.userId as userId2_5_1_ from Vote votes0_ where votes0_.postId=?
+Hibernate: select votes0_.postId as postId1_3_0_, votes0_.postId as postId1_5_0_, votes0_.userId as userId2_5_0_, votes0_.postId as postId1_5_1_, votes0_.userId as userId2_5_1_ from Vote votes0_ where votes0_.postId=?
+- Preparing collection intializer : [com.revature.models.Post.votes#65]
+- 1 collections were found in result set for role: com.revature.models.Post.votes
+- Collection fully initialized: [com.revature.models.Post.votes#65]
+- 1 collections initialized for role: com.revature.models.Post.votes
+- Done loading collection
+- Loading collection: [com.revature.models.Post.comments#65]
+- select comments0_.post_id as post_id3_3_0_, comments0_.id as id1_0_0_, comments0_.id as id1_0_1_, comments0_.content as content2_0_1_, comments0_.post_id as post_id3_0_1_, comments0_.user_id as user_id4_0_1_, user1_.id as id1_4_2_, user1_.nickname as nickname2_4_2_, user1_.role as role3_4_2_ from COMMENTS comments0_ left outer join USERS user1_ on comments0_.user_id=user1_.id where comments0_.post_id=?
+Hibernate: select comments0_.post_id as post_id3_3_0_, comments0_.id as id1_0_0_, comments0_.id as id1_0_1_, comments0_.content as content2_0_1_, comments0_.post_id as post_id3_0_1_, comments0_.user_id as user_id4_0_1_, user1_.id as id1_4_2_, user1_.nickname as nickname2_4_2_, user1_.role as role3_4_2_ from COMMENTS comments0_ left outer join USERS user1_ on comments0_.user_id=user1_.id where comments0_.post_id=?
+- Preparing collection intializer : [com.revature.models.Post.comments#65]
+- 1 collections were found in result set for role: com.revature.models.Post.comments
+- Collection fully initialized: [com.revature.models.Post.comments#65]
+- 1 collections initialized for role: com.revature.models.Post.comments
+- Done loading collection
+- Loading collection: [com.revature.models.Post.votes#73]
+- select votes0_.postId as postId1_3_0_, votes0_.postId as postId1_5_0_, votes0_.userId as userId2_5_0_, votes0_.postId as postId1_5_1_, votes0_.userId as userId2_5_1_ from Vote votes0_ where votes0_.postId=?
+Hibernate: select votes0_.postId as postId1_3_0_, votes0_.postId as postId1_5_0_, votes0_.userId as userId2_5_0_, votes0_.postId as postId1_5_1_, votes0_.userId as userId2_5_1_ from Vote votes0_ where votes0_.postId=?
+- Preparing collection intializer : [com.revature.models.Post.votes#73]
+- 1 collections were found in result set for role: com.revature.models.Post.votes
+- Collection fully initialized: [com.revature.models.Post.votes#73]
+- 1 collections initialized for role: com.revature.models.Post.votes
+- Done loading collection
+- Loading collection: [com.revature.models.Post.comments#73]
+- select comments0_.post_id as post_id3_3_0_, comments0_.id as id1_0_0_, comments0_.id as id1_0_1_, comments0_.content as content2_0_1_, comments0_.post_id as post_id3_0_1_, comments0_.user_id as user_id4_0_1_, user1_.id as id1_4_2_, user1_.nickname as nickname2_4_2_, user1_.role as role3_4_2_ from COMMENTS comments0_ left outer join USERS user1_ on comments0_.user_id=user1_.id where comments0_.post_id=?
+Hibernate: select comments0_.post_id as post_id3_3_0_, comments0_.id as id1_0_0_, comments0_.id as id1_0_1_, comments0_.content as content2_0_1_, comments0_.post_id as post_id3_0_1_, comments0_.user_id as user_id4_0_1_, user1_.id as id1_4_2_, user1_.nickname as nickname2_4_2_, user1_.role as role3_4_2_ from COMMENTS comments0_ left outer join USERS user1_ on comments0_.user_id=user1_.id where comments0_.post_id=?
+- Preparing collection intializer : [com.revature.models.Post.comments#73]
+- 1 collections were found in result set for role: com.revature.models.Post.comments
+- Collection fully initialized: [com.revature.models.Post.comments#73]
+- 1 collections initialized for role: com.revature.models.Post.comments
+- Done loading collection
+- Releasing JDBC connection
+- Released JDBC connection
+</system-out>
+  </testcase>
+</testsuite>
