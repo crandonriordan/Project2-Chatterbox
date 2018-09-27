@@ -1,0 +1,7 @@
+organization=crandonriordan-github
+projectKey=crandonriordan_Project2-Chatterbox
+serverUrl=https://sonarcloud.io
+serverVersion=7.4.0.17063
+dashboardUrl=https://sonarcloud.io/dashboard?id=crandonriordan_Project2-Chatterbox
+ceTaskId=AWYdTdQM-o61MP5s1F06
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWYdTdQM-o61MP5s1F06

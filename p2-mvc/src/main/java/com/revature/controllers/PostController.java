@@ -29,9 +29,6 @@ public class PostController {
 	@Autowired
 	PostService postService;
 	
-//	
-//	START OF THE NEW NAMING CONVENTION
-	
 	@GetMapping("/api/groups/{name}/posts")
 	public List<Post> getPostsByGroup(@PathVariable("name") String name) {
 		return postService.findPostsByGroupName(name);
@@ -70,9 +67,11 @@ public class PostController {
 		return post;
 	}
 	
-//	
-//	END OF NEW NAMING CONVENTION
 
+	@RequestMapping(method= {RequestMethod.OPTIONS, RequestMethod.HEAD, RequestMethod.TRACE, RequestMethod.PATCH})
+	public String unSupportedRequest() {
+		return "not supported requests";
+	}
 	
 	
 	

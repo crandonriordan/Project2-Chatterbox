@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.revature.dao.UserDaoImpl;
@@ -46,12 +48,16 @@ public class UserController {
 		
 	}
 	
-//	@PutMapping(value="/api/groups/{id}/users/{userId}")
-//	public User addUserToGroup
-	
 	@DeleteMapping(value="/api/users/{id}", produces="application/json")
 	public User deleteUser(@RequestBody User user) {
 		userService.deleteUser(user);
 		return user;
 	}
+	
+	@RequestMapping(method= {RequestMethod.OPTIONS, RequestMethod.HEAD, RequestMethod.TRACE, RequestMethod.PATCH})
+	public String unSupportedRequest() {
+		return "not supported requests";
+	}
+	
+	
 }
