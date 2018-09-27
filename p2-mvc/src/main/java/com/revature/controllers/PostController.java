@@ -77,6 +77,7 @@ public class PostController {
 			RequestMethod.PATCH, RequestMethod.TRACE})
 	public ResponseEntity notSupportedOnCorrectPathing() {
 		return new ResponseEntity(HttpStatus.OK);
+	}
 	
 	
 	@RequestMapping(value="/api/groups/{name}/posts/{id}", method={RequestMethod.HEAD, RequestMethod.OPTIONS, 
