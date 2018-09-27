@@ -3,11 +3,14 @@ package com.revature.daotest;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 
+import com.revature.dao.UserDao;
+import com.revature.dao.UserDaoImpl;
+
 public class UserDaoTest {
 	static final Logger logger = Logger.getLogger(CommentDaoTest.class);
 	
-//	UserDaoTest udi = new UserDaoTest();
-	
+	UserDao udi = new UserDaoImpl();
+
 	@Test
 	public void createUser() {
 		// udi.createUser(user);
