@@ -6,7 +6,7 @@ import org.junit.Test;
 public class UserDaoTest {
 	static final Logger logger = Logger.getLogger(CommentDaoTest.class);
 	
-	UserDaoTest udi = new UserDaoTest();
+//	UserDaoTest udi = new UserDaoTest();
 	
 	@Test
 	public void createUser() {
