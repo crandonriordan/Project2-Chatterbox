@@ -15,6 +15,7 @@ typically organized around a particular subject.
 
 # Database Structure
 [Imgur](https://i.imgur.com/IYxxyDu.png)
+![alt text](https://i.imgur.com/IYxxyDu.png "Logo Title Text 1")
 
 # Description of our RESTful Routes
 
