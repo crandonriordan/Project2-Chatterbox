@@ -1,5 +1,6 @@
 <h4 *ngIf="auth.isAuthenticated()">
   You are logged in!
+  <app-profile></app-profile>
 </h4>
 <h4 *ngIf="!auth.isAuthenticated()">
   <a (click)="auth.login()">Login</a> and join our community today!

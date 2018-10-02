@@ -1,3 +1,4 @@
+// this component displays the loading message
 import { Component, OnInit } from '@angular/core';
 
 @Component({

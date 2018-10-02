@@ -1,3 +1,4 @@
+// this component provides navigation to some parts of the application
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth/auth.service';
 

@@ -1,0 +1,22 @@
+<h3>{{ name }}</h3>
+<button type="button" class="btn btn-success" *ngIf="auth.isAuthenticated()" (click)="onSubmit()">Write new post</button>
+<hr>
+<div class="well" *ngFor="let post of posts">
+  <div class="media">
+  <a class="pull-left" href="#">
+    <img class="media-object" src="http://placekitten.com/150/150">
+  </a>
+  <div class="media-body">
+    <h4 class="media-heading">{{ post.title }}</h4>
+      <p class="text-right">By {{ post.user.nickname }}</p>
+      <p>{{ post.content }}</p>
+      <ul class="list-inline list-unstyled">
+        <span><i class="glyphicon glyphicon-comment"></i> {{post.comments.length}} comment(s)</span>
+        <li>|</li>
+        <li>
+           <span class="glyphicon glyphicon-thumbs-up"></span>
+            {{ post.votes.length }}
+  </ul>
+   </div>
+</div>
+</div>

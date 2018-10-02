@@ -15,23 +15,11 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">90's kids</th>
-      <td>12</td>
-      <td>43</td>
-      <td>76</td>
-    </tr>
-    <tr>
-      <th scope="row">MCU fans</th>
-      <td>45</td>
-      <td>129</td>
-      <td>264</td>
-    </tr>
-    <tr>
-      <th scope="row">Fortnite</th>
-      <td>56</td>
-      <td>243</td>
-      <td>167</td>
+    <tr *ngFor="let group of groups">
+      <th scope="row"><a (click)="onSubmit(group)">{{ group.name }}</a></th>
+      <td>{{ group.users.length }}</td>
+      <td>{{ group.posts }}</td>
+      <td>{{ group.votes }}</td>
     </tr>
   </tbody>
 </table>

@@ -1,3 +1,5 @@
+// this pagination component has not yet been implemented
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
