@@ -1,4 +1,4 @@
-l# Chatterbox
+# Chatterbox
 
 Contributors:
 * Jan Balangue - Lead
